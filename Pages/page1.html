@@ -19,8 +19,8 @@
         <div class="presentation-area">
             <div class="click-texto">
                 <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
-                        <img src="../img/setaVerde.png" alt="" srcset="">
-                    </button>
+                    <img src="../img/setaVerde.png" alt="" srcset="">
+                </button>
                 <div id='text1' class="content left-outscreen-translated noInteraction"> Podemos entender como <b>Matemática</b>, a ciência que pode ser calculada através do raciocínio rápido e lógico, sendo também abstrata por apresentar sempre um resultado fixo, sem variações. </div>
             </div>
 
@@ -120,7 +120,7 @@
                         </g>
                     </svg>
                 </div>
-                <div class="btnCirculo menu">
+                <div class="btnCirculo btnmenu" onclick="document.getElementById('menu').classList.remove('right-outscreen-translated');">
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 500" preserveAspectRatio="xMidYMid meet">
                         <g id="layer101" fill="#3c5d25" stroke="none">
                          <path d="M184 412 c-19 -12 -34 -49 -34 -83 l0 -32 -38 54 c-30 44 -44 55 -70 57 -40 4 -42 -12 -2 -28 37 -15 54 -42 75 -116 18 -61 41 -98 56 -88 5 3 9 37 9 75 0 39 7 85 15 106 15 35 15 36 67 31 l52 -5 -23 18 c-23 19 -86 26 -107 11z"/>
@@ -135,7 +135,57 @@
             </div>
         </div>
     </div>
-
+    <div id="menu" class="menu content right-outscreen-translated">
+        <div class="cabecalhoIndice">ÍNDICE
+            <button class="closeMenu" onclick="document.getElementById('menu').classList.add('right-outscreen-translated');">X</button>
+        </div>
+        <div class="coluna">
+            <button class="indiceBtn">
+                <div class="indiceCircle"></div> Introdução
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"></div> Adição
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"></div> Subtração
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"></div> Multiplicação
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"></div> Divisão
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"> 1 </div> Reconhecer a <br> Operação Indicada
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"> 2 </div> Associar informações
+            </button>
+        </div>
+        <div class="coluna right">
+            <button class="indiceBtn">
+                <div class="indiceCircle"></div> Identifique o valor
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"></div> Identificar <br> Termos das <br> Operações
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"></div> Identificar as <br> Propriedades<br> das Operações
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"></div> Resolver as <br> Operações
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"></div> Interpretar <br> Informações
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"> 1 </div> Identificar Valores
+            </button>
+            <button class="indiceBtn">
+                <div class="indiceCircle"> 2 </div> Desenvolver o <br> Raciocínio Lógico
+            </button>
+        </div>
+    </div>
 </body>
 
 </html>
