@@ -58,6 +58,7 @@ button {
 .left-outscreen-translated {
     -webkit-transform: translateX(-200%) !important;
     transform: translateX(-200%) !important;
+    color: violet;
 }
 
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
