@@ -174,9 +174,9 @@
     function nextPage() {
         const arrayOfStrings = document.getElementById('iframe').src.split("/");
         const nextPage = parseInt(arrayOfStrings[4].replace(/\D/gim, ''), 10) + 1
-        console.log('arrayOfStrings')
-        console.log('nextPage')
-        console.log('totalPaginas')
+        console.log(arrayOfStrings)
+        console.log(nextPage)
+        console.log(totalPaginas)
 
 
         if (nextPage <= totalPaginas) {
