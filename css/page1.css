@@ -60,10 +60,6 @@ button {
     transform: translateX(-200%) !important;
 }
 
-.index9 {
-    z-index: 999;
-}
-
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
     .presentation-area {
         font-size: 16px;

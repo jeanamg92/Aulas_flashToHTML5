@@ -39,35 +39,70 @@ body {
     margin: 10px;
 }
 
-.parcela {
+.tudo {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    margin: auto;
+    height: 90%;
     display: flex;
-    flex-direction: row;
+    flex: row;
     align-items: center;
-    font-size: 56px;
+}
+
+.tamanhaoCOlunas {
+    width: 34%;
+    height: 100%;
+}
+
+.colunaFracoes {
+    display: flex;
+    flex-direction: column;
+    font-size: 122px;
     font-weight: bold;
+    color: white;
+    /* background-color: blue; */
+    justify-content: space-around;
+}
+
+.parcela {
+    width: fit-content;
+    align-self: flex-end;
+}
+
+.travessao {
+    height: 19%;
 }
 
 .parcela2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 56px;
-    font-weight: bold;
+    height: 13%;
 }
 
-.fracao .coluna {
+.colunaTextos {
     display: flex;
     flex-direction: column;
+    font-size: 122px;
     font-weight: bold;
-    font-size: 56px;
-    justify-content: right;
-    align-items: center;
+    color: white;
+    justify-content: space-evenly;
+    background-color: red;
 }
 
-.linha {
+.colunaTextosSetas {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    white-space: pre-line;
+}
+
+.colunaLastTexto {
+    background-color: green;
+}
+
+.invisivel {
+    width: 100%;
+    background-color: salmon;
+    height: 10%;
 }
 
 button {
@@ -131,11 +166,15 @@ button {
     -webkit-transition: all ease-out 0.7s;
     transition: all ease-out 0.7s;
     padding: 12px;
+    font-size: 36px;
+    font-weight: 400;
 }
 
 .left-outscreen-translated {
-    -webkit-transform: translateX(-300%) !important;
-    transform: translateX(-300%) !important;
+    -webkit-transform: translateX(-50%) !important;
+    transform: translateX(-50%) !important;
+    z-index: -1;
+    color: rgba(0, 0, 0, 0);
 }
 
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
@@ -146,6 +185,26 @@ button {
         font-size: 22px;
     }
     .click-texto button img {
-        width: 40px;
+        width: 32px;
+    }
+    .colunaFracoes {
+        justify-content: center;
+        font-size: 56px;
+    }
+    .click-texto img {
+        width: 32px;
+    }
+    .content {
+        font-size: 18px;
+    }
+    .parcelaSeta2 {
+        height: 70%;
+    }
+    .invisivel {
+        width: 100%;
+        height: calc(70% - 2px);
+    }
+    .colunaTextosSetas {
+        white-space: nowrap;
     }
 }
