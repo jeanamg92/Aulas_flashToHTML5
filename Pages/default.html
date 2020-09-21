@@ -170,13 +170,14 @@
 </body>
 <script>
     const totalPaginas = 32;
+    //IMPORTANTE! - a composiçao do link tem que ser /Pages/paginax.html sempre
 
     function nextPage() {
         const arrayOfStrings = document.getElementById('iframe').src.split("/");
         const idx = arrayOfStrings.indexOf("Pages") + 1;
         const nextPage = parseInt(arrayOfStrings[idx].replace(/\D/gim, ''), 10) + 1
         if (nextPage <= totalPaginas) {
-            arrayOfStrings[4] = "page" + nextPage + ".html";
+            arrayOfStrings[idx] = "page" + nextPage + ".html";
             const srcString = arrayOfStrings.join('/');
             document.getElementById('iframe').src = srcString;
             document.getElementById("paginaAtual").innerHTML = ("00" + nextPage).slice(-2);
@@ -188,7 +189,7 @@
         const idx = arrayOfStrings.indexOf("Pages") + 1;
         const previousPage = parseInt(arrayOfStrings[idx].replace(/\D/gim, ''), 10) - 1
         if (previousPage >= 1) {
-            arrayOfStrings[4] = "page" + previousPage + ".html";
+            arrayOfStrings[idx] = "page" + previousPage + ".html";
             const srcString = arrayOfStrings.join('/');
             document.getElementById('iframe').src = srcString;
             document.getElementById("paginaAtual").innerHTML = ("00" + previousPage).slice(-2);
