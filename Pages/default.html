@@ -181,7 +181,9 @@
             document.getElementById('iframe').src = srcString;
             document.getElementById("paginaAtual").innerHTML = ("00" + nextPage).slice(-2);
             console.log(document.getElementById("paginaTotal").innerHTML);
+            console.log('next')
         }
+
     }
 
     function previousPage() {
@@ -193,6 +195,7 @@
             const srcString = arrayOfStrings.join('/');
             document.getElementById('iframe').src = srcString;
             document.getElementById("paginaAtual").innerHTML = ("00" + previousPage).slice(-2);
+            console.log('previous')
         }
     }
 </script>
