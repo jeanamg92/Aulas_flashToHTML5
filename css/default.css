@@ -188,6 +188,14 @@ body {
     cursor: pointer;
 }
 
+.contentMenu {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transition: all ease-out 0.7s;
+    transition: all ease-out 0.7s;
+    /* padding: 12px; */
+}
+
 .menu {
     position: absolute;
     /* display: flex; */
@@ -235,6 +243,7 @@ body {
     border: 4px solid rgb(164, 214, 133);
     border-radius: 50px;
     background-color: white;
+    cursor: hand;
 }
 
 .menu .cabecalhoIndice button:hover {

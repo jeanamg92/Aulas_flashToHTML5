@@ -116,53 +116,53 @@
             </div>
         </div>
     </div>
-    <div id="menu" class="menu content right-outscreen-translated">
+    <div id="menu" class="menu contentMenu right-outscreen-translated">
         <div class="cabecalhoIndice">ÍNDICE
             <button class="closeMenu" onclick="document.getElementById('menu').classList.add('right-outscreen-translated');">X</button>
         </div>
         <div class="coluna">
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(1);">
                 <div class="indiceCircle"></div> Introdução
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(2);">
                 <div class="indiceCircle"></div> Adição
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(6);">
                 <div class="indiceCircle"></div> Subtração
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(10);">
                 <div class="indiceCircle"></div> Multiplicação
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(16);">
                 <div class="indiceCircle"></div> Divisão
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(20);">
                 <div class="indiceCircle"> 1 </div> Reconhecer a <br> Operação Indicada
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(21);">
                 <div class="indiceCircle"> 2 </div> Associar informações
             </button>
         </div>
         <div class="coluna right">
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(22);">
                 <div class="indiceCircle"> 3 </div> Identifique o valor
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(23);">
                 <div class="indiceCircle"> 4 </div> Identificar <br> Termos das <br> Operações
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(24);">
                 <div class="indiceCircle"> 5 </div> Identificar as <br> Propriedades<br> das Operações
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(25);">
                 <div class="indiceCircle"> 6 </div> Resolver as <br> Operações
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(30);">
                 <div class="indiceCircle"> 7 </div> Interpretar <br> Informações
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(31);">
                 <div class="indiceCircle"> 8 </div> Identificar Valores
             </button>
-            <button class="indiceBtn">
+            <button class="indiceBtn" onclick="gotoPage(32);">
                 <div class="indiceCircle"> 9 </div> Desenvolver o <br> Raciocínio Lógico
             </button>
         </div>
@@ -196,23 +196,31 @@
         }
     }
 
-    /* Get the element you want displayed in fullscreen mode (a video in this example): */
-    var elem = document.getElementById("myvideo");
-
-    /* When the openFullscreen() function is executed, open the video in fullscreen.
-    Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
     function openFullscreen() {
+        var elem = document.getElementById("myvideo");
         if (elem.requestFullscreen) {
             elem.requestFullscreen();
         } else if (elem.mozRequestFullScreen) { /* Firefox */
             elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari e Opera */
             elem.webkitRequestFullscreen();
         } else if (elem.msRequestFullscreen) { /* IE/Edge */
             elem.msRequestFullscreen();
         }
 
-        screen.orientation.lock("portrait-primary");
+        screen.orientation.lock("landscape");
+    }
+
+    function gotoPage(page) {
+        const arrayOfStrings = document.getElementById('iframe').src.split("/");
+        const idx = arrayOfStrings.indexOf("Pages") + 1;
+        const previousPage = page
+            // if (previousPage >= 1) {
+        arrayOfStrings[idx] = "page" + previousPage + ".html";
+        const srcString = arrayOfStrings.join('/');
+        document.getElementById('iframe').src = srcString;
+        document.getElementById("paginaAtual").innerHTML = ("00" + previousPage).slice(-2);
+        // }
     }
 </script>
 
