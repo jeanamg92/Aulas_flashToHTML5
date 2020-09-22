@@ -15,7 +15,7 @@ body {
     height: 100%;
 }
 
-.operacao {
+.presentation-area .operacao {
     font-weight: bold;
     font-size: 36px;
     color: white;
@@ -64,7 +64,7 @@ button {
 
 .calculosPai .enunciado {
     float: left;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .calculosPai .calculos {
@@ -79,7 +79,10 @@ button {
     justify-content: space-between;
 }
 
-.calculosPai .calculos .linha .conta {}
+.calculosPai .calculos .linha .conta {
+    font-weight: bold;
+    font-size: 24px;
+}
 
 .maisFont {
     font-size: 74px;

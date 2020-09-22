@@ -15,7 +15,7 @@ body {
     height: 100%;
 }
 
-.operacao {
+.presentation-area .operacao {
     font-weight: bold;
     font-size: 36px;
     color: white;
@@ -50,7 +50,7 @@ button {
 }
 
 .maisFont {
-    font-size: 74px;
+    font-size: 112px;
 }
 
 .presentation-area .click-texto .click-anim svg {
