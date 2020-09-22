@@ -180,6 +180,39 @@ button {
     color: rgba(0, 0, 0, 0);
 }
 
+
+/* @media screen and (max-device-width: 1599) and (max-device-height: 899px) {
+    .presentation-area {
+        font-size: 16px;
+    }
+    .operacao {
+        font-size: 22px;
+    }
+    .click-texto button img {
+        width: 32px;
+    }
+    .colunaFracoes {
+        justify-content: center;
+        font-size: 92px;
+    }
+    .click-texto img {
+        width: 32px;
+    }
+    .content {
+        font-size: 18px;
+    }
+    .parcelaSeta2 {
+        height: 70%;
+    }
+    .invisivel {
+        width: 100%;
+        height: calc(70% - 2px);
+    }
+    .colunaTextosSetas {
+        white-space: nowrap;
+    }
+} */
+
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
     .presentation-area {
         font-size: 16px;
@@ -192,7 +225,7 @@ button {
     }
     .colunaFracoes {
         justify-content: center;
-        font-size: 56px;
+        font-size: 90px;
     }
     .click-texto img {
         width: 32px;
@@ -201,7 +234,7 @@ button {
         font-size: 18px;
     }
     .parcelaSeta2 {
-        height: 70%;
+        height: 27%;
     }
     .invisivel {
         width: 100%;
