@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="../css/default.css">
 </head>
 
-<body>
+<body id="myvideo">
     <div class="tudo">
         <div class="cabecalho">
             <div class="titulo">MATEMÁTICA • As quatro Operações</div>
 
             <div class="ano">4º ANO</div>
         </div>
-        <div class="subTitulo">INTRODUÇÃO</div>
+        <div class="subTitulo" onclick="openFullscreen();">INTRODUÇÃO</div>
 
         <iframe id="iframe" class="presentation-area-iframe" src="page1.html" frameborder="0"></iframe>
 
@@ -193,6 +193,23 @@
             const srcString = arrayOfStrings.join('/');
             document.getElementById('iframe').src = srcString;
             document.getElementById("paginaAtual").innerHTML = ("00" + previousPage).slice(-2);
+        }
+    }
+
+    /* Get the element you want displayed in fullscreen mode (a video in this example): */
+    var elem = document.getElementById("myvideo");
+
+    /* When the openFullscreen() function is executed, open the video in fullscreen.
+    Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+    function openFullscreen() {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+            elem.msRequestFullscreen();
         }
     }
 </script>
