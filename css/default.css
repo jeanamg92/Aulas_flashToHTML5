@@ -136,11 +136,13 @@ body {
 
 .navbar .previousPage svg:hover {
     color: rgb(163, 163, 163) !important;
+    width: 43px;
     transition: 0.3s;
 }
 
 .navbar .nextPage svg:hover {
     color: rgb(163, 163, 163) !important;
+    width: 43px;
     transition: 0.3s;
 }
 
