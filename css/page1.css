@@ -13,9 +13,14 @@ body {
     color: white;
     overflow-x: hidden;
     overflow-y: hidden;
+    background-image: url("../img/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
 }
 
-.presentation-area {
+.quadradoVerde {
     font-size: 22px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -26,8 +31,53 @@ body {
     flex-direction: column;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
+    width: 80%;
+    height: 65%;
+    margin: auto;
+    border: 4px solid rgb(164, 214, 133);
+    border-radius: 16px;
+    background-color: rgba(0, 121, 10, 0.7);
+}
+
+.subtitulo {
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 26vw;
+    height: 8vh;
+    border: 4px solid rgb(164, 214, 133);
+    border-radius: 16px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin: auto;
+    margin-left: 10px;
+    margin-top: 2vh;
+    background-color: rgb(117, 191, 66);
+    font-weight: bold;
+    max-width: 172px;
+    max-height: 49px;
+    margin-bottom: 0px;
+}
+
+.presentation-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 
 .presentation-area .click-texto {
@@ -61,7 +111,7 @@ body {
 button {
     background-color: transparent;
     border: 0;
-    outline: 0!important;
+    outline: 0 !important;
     cursor: pointer;
 }
 
