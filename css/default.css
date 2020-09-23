@@ -246,6 +246,7 @@ body {
     border-radius: 50px;
     background-color: white;
     cursor: hand;
+    outline: none;
 }
 
 .menu .cabecalhoIndice button:hover {
@@ -280,6 +281,17 @@ body {
     border: 0;
     background-color: rgba(255, 255, 255, 0);
     cursor: hand;
+    outline: none;
+}
+
+.menu .coluna .indiceBtn:hover {
+    background-color: rgba(160, 160, 160, 0.7);
+    /* border: 1px solid rgb(83, 83, 83); */
+    /* border-radius: 10px; */
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transition: all ease-out 0.7s;
+    transition: all ease-out 0.7s;
 }
 
 .menu .coluna .indiceBtn .indiceCircle {
@@ -295,6 +307,11 @@ body {
     border: 4px solid rgb(164, 214, 133);
     border-radius: 50px;
     background-color: rgb(117, 191, 66);
+}
+
+.menu .coluna .indiceBtn .indiceCircle:hover {
+    border: 4px solid rgb(117, 191, 66);
+    background-color: rgb(164, 214, 133);
 }
 
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
