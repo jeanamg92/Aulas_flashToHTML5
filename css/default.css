@@ -72,14 +72,45 @@
 
 .presentation-area .quadradoVerde .operacao {
     font-weight: bold;
-    font-size: 9vh;
+    font-size: 6vh;
     color: white;
     /* padding: 26px; */
     /* padding-bottom: 0px; */
 }
 
+.calculosPai .calculos {
+    font-size: 4vh;
+    width: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
 
-/* Pagina 19 tem o proprio dela */
+.calculosPai .calculos .linha .conta {
+    font-weight: bold;
+    font-size: 4vh;
+}
+
+.calculosPai .calculos .linha {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+
+
+/* Paginas 19 tem o proprio  dela */
 
 .presentation-area .click-texto {
     display: -webkit-box;

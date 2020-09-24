@@ -38,7 +38,8 @@ button {
     font-size: 3.3vh !important;
 }
 
-.calculosPai .calculos {
+
+/* .calculosPai .calculos {
     width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -47,7 +48,7 @@ button {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-}
+} */
 
 .calculosPai .calculos .linha {
     display: -webkit-box;
@@ -62,10 +63,11 @@ button {
     justify-content: space-between;
 }
 
-.calculosPai .calculos .linha .conta {
+
+/* .calculosPai .calculos .linha .conta {
     font-weight: bold;
     font-size: 24px;
-}
+} */
 
 .presentation-area .click-texto .click-anim svg {
     color: rgb(47, 153, 5);

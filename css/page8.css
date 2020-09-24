@@ -45,6 +45,8 @@ button {
     margin-bottom: 25px;
 }
 
+
+/* 
 .calculosPai .calculos {
     width: 50%;
     display: -webkit-box;
@@ -54,9 +56,10 @@ button {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-}
+} */
 
-.calculosPai .calculos .linha {
+
+/* .calculosPai .calculos .linha {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -68,7 +71,7 @@ button {
     -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 25px;
-}
+} */
 
 .calculosPai .calculos .linha .conta {}
 

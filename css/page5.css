@@ -162,7 +162,8 @@ button {
     margin-bottom: 10px;
 }
 
-.calculosPai .calculos {
+
+/* .calculosPai .calculos {
     width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -171,7 +172,7 @@ button {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-}
+} */
 
 .calculosPai .calculos .linha {
     display: -webkit-box;
@@ -203,37 +204,6 @@ button {
     z-index: -1;
     color: rgba(0, 0, 0, 0);
 }
-
-
-/* @media screen and (max-device-width: 1599) and (max-device-height: 899px) {
-    .presentation-area {
-        font-size: 16px;
-    }
-    
-    .click-texto button img {
-        width: 32px;
-    }
-    .colunaFracoes {
-        justify-content: center;
-        font-size: 92px;
-    }
-    .click-texto img {
-        width: 32px;
-    }
-    .content {
-        font-size: 18px;
-    }
-    .parcelaSeta2 {
-        height: 70%;
-    }
-    .invisivel {
-        width: 100%;
-        height: calc(70% - 2px);
-    }
-    .colunaTextosSetas {
-        white-space: nowrap;
-    }
-} */
 
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
     .presentation-area {

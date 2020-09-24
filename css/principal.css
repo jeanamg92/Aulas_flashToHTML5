@@ -187,7 +187,7 @@ body {
 }
 
 .navbar svg {
-    width: 45px;
+    width: 6vh;
     cursor: pointer;
 }
 
@@ -199,7 +199,7 @@ body {
 
 .navbar .previousPage svg:hover {
     color: rgb(163, 163, 163) !important;
-    width: 43px;
+    width: 6.1vh;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -207,7 +207,7 @@ body {
 
 .navbar .nextPage svg:hover {
     color: rgb(163, 163, 163) !important;
-    width: 43px;
+    width: 6.1vh;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -449,18 +449,12 @@ body {
         width: 22vw;
         max-width: 200px;
     }
-    .navbar svg {
-        width: 30px;
-    }
     .presentation-area {
         font-size: 16px;
     }
     .btnCirculo {
         width: 58px;
         height: 56px;
-    }
-    .click-texto button img {
-        width: 40px;
     }
     .menu .cabecalhoIndice {
         font-size: 16px;
