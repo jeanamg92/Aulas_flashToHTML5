@@ -31,42 +31,6 @@ body {
     /* margin: auto; */
 }
 
-.operacao {
-    font-weight: bold;
-    font-size: 36px;
-    color: white;
-    padding: 26px;
-    padding-bottom: 0px;
-}
-
-.presentation-area .click-texto {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.presentation-area button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-}
-
 .tudo {
     background-color: rgba(0, 0, 0, 0);
     width: 100%;
@@ -175,10 +139,6 @@ button {
     cursor: pointer;
 }
 
-.click-texto button img {
-    width: 50px;
-}
-
 .calculosPai {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -230,24 +190,10 @@ button {
     font-size: 18px;
 }
 
-.maisFont {
-    font-size: 74px;
-}
-
 .presentation-area .click-texto .click-anim svg {
     color: rgb(47, 153, 5);
     width: 30px;
     height: auto;
-}
-
-.content {
-    -webkit-transform: translateX(0%);
-    -ms-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transition: all ease-out 0.7s;
-    -o-transition: all ease-out 0.7s;
-    transition: all ease-out 0.7s;
-    padding: 12px;
 }
 
 .left-outscreen-translated {
@@ -263,9 +209,7 @@ button {
     .presentation-area {
         font-size: 16px;
     }
-    .operacao {
-        font-size: 22px;
-    }
+    
     .click-texto button img {
         width: 32px;
     }
@@ -294,9 +238,6 @@ button {
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
     .presentation-area {
         font-size: 16px;
-    }
-    .operacao {
-        font-size: 22px;
     }
     .click-texto button img {
         width: 32px;
