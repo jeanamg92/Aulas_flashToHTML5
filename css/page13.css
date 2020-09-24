@@ -5,16 +5,6 @@
 * Browsers: last 4 version
 */
 
-body {
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
-    font-family: sans-serif;
-    color: white;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
 button {
     background-color: transparent;
     border: 0;

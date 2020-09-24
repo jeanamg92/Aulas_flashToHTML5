@@ -209,7 +209,7 @@
               </g>
             </svg>
                 </div>
-                <div class="btnCirculo btnmenu" onclick="document.getElementById('menu').classList.remove('right-outscreen-translated');">
+                <div class="btnCirculo btnmenu" onclick="chamaMenu();">
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 500" preserveAspectRatio="xMidYMid meet">
               <g id="layer101" fill="#3c5d25" stroke="none">
                 <path
@@ -356,6 +356,15 @@
         document.getElementById("iframe").src = srcString;
         document.getElementById("paginaAtual").innerHTML = ("00" + previousPage).slice(-2);
         // }
+    }
+
+    function chamaMenu() {
+        const menu = document.getElementById('menu');
+        if (menu.classList.contains('right-outscreen-translated')) {
+            document.getElementById('menu').classList.remove('right-outscreen-translated');
+        } else {
+            document.getElementById('menu').classList.add('right-outscreen-translated');
+        }
     }
 </script>
 

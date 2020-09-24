@@ -5,21 +5,15 @@
 * Browsers: last 4 version
 */
 
-body {
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
-    font-family: sans-serif;
-    color: white;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
 button {
     background-color: transparent;
     border: 0;
     outline: 0!important;
     cursor: pointer;
+}
+
+.quadradoVerde {
+    font-size: 3vh !important;
 }
 
 .calculosPai {
@@ -82,10 +76,10 @@ button {
 }
 
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
-    .presentation-area {
+    /* .presentation-area {
         font-size: 16px;
     }
     .click-texto button img {
         width: 40px;
-    }
+    } */
 }

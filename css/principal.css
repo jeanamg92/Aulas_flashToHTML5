@@ -49,7 +49,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 4vh;
     width: 100vw;
     height: 8vh;
     background-color: rgb(117, 191, 66);
@@ -142,6 +142,7 @@ body {
     width: 100vw;
     height: 8vh;
     background-color: rgb(117, 191, 66);
+    font-size: 4vh;
 }
 
 .logo {
@@ -178,11 +179,11 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 21vw;
+    width: 25vw;
     height: -webkit-fill-available;
     border-radius: 50px;
     background-color: rgb(164, 214, 133);
-    font-size: 36px;
+    font-size: 5.3vh;
     font-weight: bold;
 }
 
@@ -217,7 +218,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 24px;
+    font-size: 3vh;
     height: 100%;
     /* padding-top: 13px; */
     margin-left: 1vw;
@@ -251,8 +252,8 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 72px;
-    height: 72px;
+    width: 10vh;
+    height: 10vh;
     border: 4px solid rgb(76, 161, 83);
     background-color: #005d8c;
     border-radius: 50px;
@@ -334,15 +335,15 @@ body {
     padding-right: 30px;
     padding-left: 30px;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 5vh;
 }
 
 .menu .cabecalhoIndice button {
     color: rgb(117, 191, 66);
-    font-size: 26px;
+    font-size: 4vh;
     font-weight: bold;
-    width: 45px;
-    height: 45px;
+    width: 7vh;
+    height: 7vh;
     border: 4px solid rgb(164, 214, 133);
     border-radius: 50px;
     background-color: white;
@@ -389,7 +390,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 2.4vh;
+    font-size: 2.2vh;
     border: 0;
     background-color: rgba(255, 255, 255, 0);
     cursor: hand;
@@ -422,8 +423,8 @@ body {
     font-size: 20px;
     font-weight: bold;
     margin-right: 12px;
-    width: 40px;
-    height: 40px;
+    width: 6vh;
+    height: 6vh;
     border: 4px solid rgb(164, 214, 133);
     border-radius: 50px;
     background-color: rgb(117, 191, 66);
@@ -435,40 +436,9 @@ body {
 }
 
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
-    .cabecalho {
-        font-size: 18px;
-    }
-    .rodape {
-        font-size: 18px;
-    }
-    .paginaTotal {
-        font-size: 14px;
-    }
     .navbar {
-        font-size: 26px;
-        width: 22vw;
-        max-width: 200px;
-    }
-    .presentation-area {
-        font-size: 16px;
-    }
-    .btnCirculo {
-        width: 58px;
-        height: 56px;
-    }
-    .menu .cabecalhoIndice {
-        font-size: 16px;
-    }
-    .menu .cabecalhoIndice button {
-        width: 30px;
-        height: 30px;
-        font-size: 16px;
-    }
-    .menu .coluna .indiceBtn {
-        font-size: 10px;
-    }
-    .menu .coluna .indiceBtn .indiceCircle {
-        width: 30px;
-        height: 30px;
+        /* font-size: 26px; */
+        /* width: 22vw;
+        max-width: 200px; */
     }
 }
