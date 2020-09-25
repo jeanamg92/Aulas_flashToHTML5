@@ -12,6 +12,8 @@ button {
 }
 
 .content {
+    /* display: flex; */
+    /* color: red; */
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
     transform: translateX(0%);
@@ -22,6 +24,7 @@ button {
 }
 
 .left-outscreen-translated {
+    color: transparent;
     -webkit-transform: translateX(-200%) !important;
     -ms-transform: translateX(-200%) !important;
     transform: translateX(-200%) !important;
