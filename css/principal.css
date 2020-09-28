@@ -95,20 +95,25 @@ body {
 }
 
 .ano {
-    width: 116px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding-left: 5px;
-    padding-right: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    height: 100%;
-    background-color: rgb(164, 214, 133);
+    justify-content: center;
+    background: rgb(164, 214, 133);
+    width: 10vw;
+    height: 8vh;
+    position: relative;
+}
+
+.ano::before {
+    /*Triangulo*/
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 2vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    border-right: 2vh solid rgb(164, 214, 133);
+    right: 100%
 }
 
 .subtitulo {
