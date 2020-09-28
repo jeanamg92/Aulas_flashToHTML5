@@ -5,6 +5,40 @@
 * Browsers: last 4 version
 */
 
+
+/* .fullScreen {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    background-color: violet;
+    z-index: 999;
+} */
+
+.displayNone {
+    display: none !important;
+}
+
+#overlay {
+    /* position: absolute; */
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(12, 12, 11, 0.534);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+    flex-direction: column;
+    z-index: 999;
+}
+
 body {
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;

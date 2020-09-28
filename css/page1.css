@@ -23,13 +23,6 @@ button {
     padding: 12px;
 }
 
-.left-outscreen-translated {
-    color: transparent;
-    -webkit-transform: translateX(-200%) !important;
-    -ms-transform: translateX(-200%) !important;
-    transform: translateX(-200%) !important;
-}
-
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
     /* .presentation-area {
         font-size: 16px;

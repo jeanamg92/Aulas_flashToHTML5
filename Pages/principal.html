@@ -9,7 +9,11 @@
 </head>
 
 <body id="myvideo">
-    <div class="tudo">
+    <div id="overlay" class="fullScreen" style="display: flex;" onclick="removeClasseFS()">
+        <div>Clique aqui para tela cheia</div>
+    </div>
+
+    <div id="tudo" class="tudo displayNone">
         <div class="cabecalho">
             <div class="titulo">MATEMÁTICA • As quatro Operações</div>
 
@@ -226,7 +230,7 @@
             </div>
         </div>
     </div>
-    <div id="menu" class="menu contentMenu right-outscreen-translated">
+    <div id="menu" class=" displayNone menu contentMenu right-outscreen-translated">
         <div class="cabecalhoIndice">
             ÍNDICE
             <button class="closeMenu" onclick="document.getElementById('menu').classList.add('right-outscreen-translated');">X</button>
@@ -365,6 +369,13 @@
         } else {
             document.getElementById('menu').classList.add('right-outscreen-translated');
         }
+    }
+
+    function removeClasseFS() {
+        openFullscreen();
+        document.getElementById('tudo').classList.remove('displayNone')
+        document.getElementById('menu').classList.remove('displayNone')
+        document.getElementById('overlay').classList.add('displayNone')
     }
 </script>
 
