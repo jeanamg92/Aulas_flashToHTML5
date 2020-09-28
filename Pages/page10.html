@@ -13,17 +13,32 @@
         <div class="operacao">MULTIPLICAÇÃO</div>
 
         <div class="click-texto opFonte">
-            <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
             <div id='text1' class="content left-outscreen-translated noInteraction "> × </div>
         </div>
 
         <div class="click-texto">
-            <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+            <button class="click-anim" type='button' onclick="retiraClasse('text2')">
             <img src="../img/setaVerde.png" alt="" srcset="">
         </button>
             <div id='text2' class="content left-outscreen-translated noInteraction"> Conhecida pelo sinal de <b>X</b> esta operação é indicada para o adicionamento de números em igualdade de ordem finita, ou seja, multiplicando-se um número vezes outro, você obterá o resultado final que é chamado de produto. </div>
-        </div>
-    </div>
-</div>
+            <script>
+                function sleep(milliseconds) {
+                    var start = new Date().getTime();
+                    for (var i = 0; i < 1e7; i++) {
+                        if ((new Date().getTime() - start) > milliseconds) {
+                            break;
+                        }
+                    }
+                }
+
+                function retiraClasse(text) {
+                    // console.log(text);
+                    document.getElementById('' + text).classList.add('showColor');
+                    sleep(100)
+                    document.getElementById('' + text).classList.remove('left-outscreen-translated');
+
+                }
+            </script>

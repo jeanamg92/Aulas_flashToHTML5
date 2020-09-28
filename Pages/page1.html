@@ -10,30 +10,44 @@
 
     <div class="quadradoVerde">
         <div class="click-texto">
-            <button class="click-anim" type="button" onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+            <button class="click-anim" type="button" onclick="retiraClasse('text1');">
         <img src="../img/setaVerde.png" alt="" srcset="" />
       </button>
-            <div id="text1" class="content left-outscreen-translated noInteraction">
+            <div id="text1" style="color: transparent;" class="content left-outscreen-translated noInteraction">
                 Podemos entender como <b>Matemática</b>, a ciência que pode ser calculada através do raciocínio rápido e lógico, sendo também abstrata por apresentar sempre um resultado fixo, sem variações.
             </div>
         </div>
 
         <div class="click-texto">
-            <button class="click-anim" type="button" onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+            <button class="click-anim" type="button" onclick="retiraClasse('text2');">
         <img src="../img/setaVerde.png" alt="" srcset="" />
       </button>
-            <div id="text2" class="content left-outscreen-translated noInteraction">
+            <div id="text2" style="color: transparent;" class="content left-outscreen-translated noInteraction">
                 Ela tem como base de estudos a quantidade, as grandezas, a extensão e as mudanças referentes aos cálculos.
             </div>
         </div>
 
         <div class="click-texto">
-            <button class="click-anim" type="button" onclick="document.getElementById('text3').classList.remove('left-outscreen-translated');">
+            <button class="click-anim" type="button" onclick="retiraClasse('text3');">
         <img src="../img/setaVerde.png" alt="" srcset="" />
       </button>
-            <div id="text3" class="content left-outscreen-translated noInteraction">
+            <div id="text3" style="color: transparent;" class="content left-outscreen-translated noInteraction">
                 Sempre marcou presença na vida do ser humano, desde os tempos antigos até os dias de hoje, porém, suas transformações são renovadas a cada dia, auxiliando assim cada vez mais o conhecimento envoldido.
             </div>
-        </div>
-    </div>
-</div>
+            <script>
+                function sleep(milliseconds) {
+                    var start = new Date().getTime();
+                    for (var i = 0; i < 1e7; i++) {
+                        if ((new Date().getTime() - start) > milliseconds) {
+                            break;
+                        }
+                    }
+                }
+
+                function retiraClasse(text) {
+                    document.getElementById('' + text).classList.add('showColor');
+                    sleep(100)
+                    document.getElementById('' + text).classList.remove('left-outscreen-translated');
+
+                }
+            </script>

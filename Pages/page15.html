@@ -24,7 +24,7 @@
             <div class="colunaTextosSetas tamanhaoCOlunas">
                 <div class="parcelaSetas">
                     <div class="click-texto">
-                        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+                        <button class="click-anim" type='button' onclick="retiraClasse('text1')">
                     <img src="../img/setaVerde.png" alt="" srcset="">
                 </button>
                         <div id='text1' class="content left-outscreen-translated noInteraction">Multiplicando </div>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="parcelaSetas parcelaSeta2">
                     <div class="click-texto">
-                        <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+                        <button class="click-anim" type='button' onclick="retiraClasse('text2')">
                     <img src="../img/setaVerde.png" alt="" srcset="">
                 </button>
                         <div id='text2' class="content left-outscreen-translated noInteraction">Multiplicador </div>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="parcelaSetas">
                     <div class="click-texto">
-                        <button class="click-anim" type='button' onclick="document.getElementById('text3').classList.remove('left-outscreen-translated');">
+                        <button class="click-anim" type='button' onclick="retiraClasse('text3')">
                     <img src="../img/setaVerde.png" alt="" srcset="">
                 </button>
                         <div id='text3' class="content left-outscreen-translated noInteraction">Produto </div>
@@ -49,12 +49,27 @@
             </div>
             <!-- <div class="colunaLastTexto tamanhaoCOlunas">
             <div class="click-texto">
-                <button class="click-anim" type='button' onclick="document.getElementById('text4').classList.remove('left-outscreen-translated');">
+                <button class="click-anim" type='button' onclick="retiraClasse('text4')">
                 <img src="../img/setaVerde.png" alt="" srcset="">
             </button>
                 <div id='text4' class="content left-outscreen-translated noInteraction"><b>Importante:</b> Ao realizar um problema envolvendo subtração, o número maior sempre deverá ser o minuendo.</div>
             </div>
         </div> -->
-        </div>
-    </div>
-</div>
+            <script>
+                function sleep(milliseconds) {
+                    var start = new Date().getTime();
+                    for (var i = 0; i < 1e7; i++) {
+                        if ((new Date().getTime() - start) > milliseconds) {
+                            break;
+                        }
+                    }
+                }
+
+                function retiraClasse(text) {
+                    // console.log(text);
+                    document.getElementById('' + text).classList.add('showColor');
+                    sleep(100)
+                    document.getElementById('' + text).classList.remove('left-outscreen-translated');
+
+                }
+            </script>

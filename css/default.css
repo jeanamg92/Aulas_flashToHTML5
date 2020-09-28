@@ -16,6 +16,17 @@ body {
 
 /* a page4 tem  oproprio tamanho de fonte */
 
+.left-outscreen-translated {
+    /* color: transparent !important; */
+    -webkit-transform: translateX(-600%) !important;
+    -ms-transform: translateX(-600%) !important;
+    transform: translateX(-600%) !important;
+}
+
+.showColor {
+    color: white !important;
+}
+
 .quadradoVerde {
     font-size: 4vh;
     display: -webkit-box;

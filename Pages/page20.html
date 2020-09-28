@@ -45,12 +45,27 @@
                 <div class="calculoAtv"> <label for="" style="color: transparent;">0</label>45
                     <div class="quadradoOp"></div> 9 = 5 </div>
             </div>
-        </div>
-    </div>
-</div>
+            <script>
+                function sleep(milliseconds) {
+                    var start = new Date().getTime();
+                    for (var i = 0; i < 1e7; i++) {
+                        if ((new Date().getTime() - start) > milliseconds) {
+                            break;
+                        }
+                    }
+                }
 
-<script>
-    function dragStart(event) {
+                function retiraClasse(text) {
+                    // console.log(text);
+                    document.getElementById('' + text).classList.add('showColor');
+                    sleep(100)
+                    document.getElementById('' + text).classList.remove('left-outscreen-translated');
 
-    }
-</script>
+                }
+            </script>
+
+            <script>
+                function dragStart(event) {
+
+                }
+            </script>

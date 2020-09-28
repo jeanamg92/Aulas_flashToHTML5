@@ -13,14 +13,14 @@
         <div class="operacao">DIVISÃO</div>
 
         <div class="click-texto opFonte">
-            <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
             <div id='text1' style="font-family:'monospace'" class="content left-outscreen-translated noInteraction "> ÷ </div>
         </div>
 
         <div class="click-texto">
-            <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+            <button class="click-anim" type='button' onclick="retiraClasse('text2')">
             <img src="../img/setaVerde.png" alt="" srcset="">
         </button>
             <div id='text2' class="content left-outscreen-translated noInteraction"> Propõe uma ordem inversa à multiplicação, ou seja, sua função principal é dividir a quantidade proposta por outro número, que jamais pode ser o zero. É representada pelo sinal (÷), seus membros recebem o nome de divisor, dividendo, quociente
@@ -28,10 +28,25 @@
         </div>
 
         <div class="click-texto">
-            <button class="click-anim" type='button' onclick="document.getElementById('text3').classList.remove('left-outscreen-translated');">
+            <button class="click-anim" type='button' onclick="retiraClasse('text3')">
             <img src="../img/setaVerde.png" alt="" srcset="">
         </button>
             <div id='text3' class="content left-outscreen-translated noInteraction"> Na área das exatas, tudo é certo, portanto, se o resultado não for o exato, o cálculo nunca terminará.</div>
-        </div>
-    </div>
-</div>
+            <script>
+                function sleep(milliseconds) {
+                    var start = new Date().getTime();
+                    for (var i = 0; i < 1e7; i++) {
+                        if ((new Date().getTime() - start) > milliseconds) {
+                            break;
+                        }
+                    }
+                }
+
+                function retiraClasse(text) {
+                    // console.log(text);
+                    document.getElementById('' + text).classList.add('showColor');
+                    sleep(100)
+                    document.getElementById('' + text).classList.remove('left-outscreen-translated');
+
+                }
+            </script>

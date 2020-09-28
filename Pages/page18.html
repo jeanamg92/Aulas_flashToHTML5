@@ -13,7 +13,7 @@
         <div class="operacao">PROPRIEDADES DA DIVISÃO</div>
 
         <div class="click-texto">
-            <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
             <div id='text1' class="content left-outscreen-translated noInteraction calculosPai">
@@ -23,15 +23,30 @@
         </div>
 
         <div class="click-texto">
-            <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+            <button class="click-anim" type='button' onclick="retiraClasse('text2')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
             <div id='text2' class="content left-outscreen-translated noInteraction calculosPai">
                 <div class="tipo">Comutatividade</div>
                 <div class="enunciado">Esta propriedade não é satisfeita, pois, por exemplo, 2 dividido por 1 é diferente de 1 dividido por 2, o qual nem pertence aos naturais.</div>
             </div>
-        </div>
-    </div>
-</div>
+            <script>
+                function sleep(milliseconds) {
+                    var start = new Date().getTime();
+                    for (var i = 0; i < 1e7; i++) {
+                        if ((new Date().getTime() - start) > milliseconds) {
+                            break;
+                        }
+                    }
+                }
 
-</div>
+                function retiraClasse(text) {
+                    // console.log(text);
+                    document.getElementById('' + text).classList.add('showColor');
+                    sleep(100)
+                    document.getElementById('' + text).classList.remove('left-outscreen-translated');
+
+                }
+            </script>
+
+        </div>
