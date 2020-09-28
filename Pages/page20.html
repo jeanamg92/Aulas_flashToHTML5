@@ -17,34 +17,34 @@
     <div class="quadradoVerdeAtv">
         <div class="tudo">
             <div class="coluna fonteOp">
-                <div class="operador" id="adicaoOp" draggable="true" ondragstart="dragStart(event)">+</div>
-                <div class="operador" id="subOp" draggable="true" ondragstart="dragStart(event)">-</div>
-                <div class="operador" id="multiOp" draggable="true" ondragstart="dragStart(event)">×</div>
-                <div class="operador" id="diviOp" draggable="true" ondragstart="dragStart(event)">÷</div>
+                <div class="operador" id="+" draggable="true" ondragstart="dragStart(event)">+</div>
+                <div class="operador" id="-" draggable="true" ondragstart="dragStart(event)">-</div>
+                <div class="operador" id="*" draggable="true" ondragstart="dragStart(event)">×</div>
+                <div class="operador" id="/" draggable="true" ondragstart="dragStart(event)">÷</div>
             </div>
             <div class="coluna">
                 <div class="calculoAtv"> <label for="" style="color: transparent;">0</label> 13
-                    <div class="quadradoOp"></div> 6 = 78 </div>
+                    <div class="quadradoOp" ondrop="drop(event, '*')" ondragover="allowDrop(event)"></div> 6 = 78 </div>
                 <div class="calculoAtv"> 500
-                    <div class="quadradoOp"></div> 2 = 250 </div>
+                    <div class="quadradoOp" ondrop="drop(event, '/')" ondragover="allowDrop(event)"></div> 2 = 250 </div>
                 <div class="calculoAtv"> 279
-                    <div class="quadradoOp"></div> 63 = 216 </div>
+                    <div class="quadradoOp" ondrop="drop(event, '-')" ondragover="allowDrop(event)"></div> 63 = 216 </div>
                 <div class="calculoAtv"> 800
-                    <div class="quadradoOp"></div> 37 = 837 </div>
+                    <div class="quadradoOp" ondrop="drop(event, '+')" ondragover="allowDrop(event)"></div> 37 = 837 </div>
                 <div class="calculoAtv"> 511
-                    <div class="quadradoOp"></div> 115 = 626 </div>
+                    <div class="quadradoOp" ondrop="drop(event, '+')" ondragover="allowDrop(event)"></div> 115 = 626 </div>
             </div>
             <div class="coluna">
                 <div class="calculoAtv"> 400
-                    <div class="quadradoOp"></div> 232 = 632 </div>
+                    <div class="quadradoOp" ondrop="drop(event, '+')" ondragover="allowDrop(event)"></div> 232 = 632 </div>
                 <div class="calculoAtv"> 509
-                    <div class="quadradoOp"></div> 98 = 411 </div>
+                    <div class="quadradoOp" ondrop="drop(event, '-')" ondragover="allowDrop(event)"></div> 98 = 411 </div>
                 <div class="calculoAtv"> 600
-                    <div class="quadradoOp"></div> 0 = 0 </div>
+                    <div class="quadradoOp" ondrop="drop(event, '*')" ondragover="allowDrop(event)"></div> 0 = 0 </div>
                 <div class="calculoAtv"> 333
-                    <div class="quadradoOp"></div> 3 = 111 </div>
+                    <div class="quadradoOp" ondrop="drop(event, '/')" ondragover="allowDrop(event)"></div> 3 = 111 </div>
                 <div class="calculoAtv"> <label for="" style="color: transparent;">0</label>45
-                    <div class="quadradoOp"></div> 9 = 5 </div>
+                    <div class="quadradoOp" ondrop="drop(event, '/')" ondragover="allowDrop(event)"></div> 9 = 5 </div>
             </div>
             <script>
                 function sleep(milliseconds) {
@@ -65,8 +65,25 @@
                 }
             </script>
 
+            <!-- game -->
             <script>
-                function dragStart(event) {
+                function allowDrop(ev) {
+                    ev.preventDefault();
+                }
 
+                function dragStart(ev) {
+                    ev.dataTransfer.setData("Text", ev.target.id);
+                }
+
+                function drop(ev, x) {
+                    var operacao = ev.dataTransfer.getData("Text");
+                    if (operacao == x) {
+                        ev.target.appendChild(document.getElementById(operacao));
+                        ev.preventDefault();
+                        console.log("Acertou");
+                    } else {
+                        console.log("Errou");
+                        return
+                    }
                 }
             </script>
