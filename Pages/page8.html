@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="../css/canvasDefault.css" />
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/page8.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
@@ -37,21 +39,5 @@
                 <div class="enunciado">3 - 4 não pertence a IN, portanto, <b>NÃO</b> existe esta propriedade.</div>
             </div>
             <script>
-                function sleep(milliseconds) {
-                    var start = new Date().getTime();
-                    for (var i = 0; i < 1e7; i++) {
-                        if ((new Date().getTime() - start) > milliseconds) {
-                            break;
-                        }
-                    }
-                }
-
-                function retiraClasse(text) {
-                    // console.log(text);
-                    document.getElementById('' + text).classList.add('showColor');
-                    sleep(100)
-                    document.getElementById('' + text).classList.remove('left-outscreen-translated');
-
-                }
             </script>
         </div>

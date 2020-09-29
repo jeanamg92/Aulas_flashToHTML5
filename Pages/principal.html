@@ -6,6 +6,39 @@
     <title>MATEMÁTICA • As quatro Operações</title>
     <link rel="stylesheet" href="../css/canvasDefault.css" />
     <link rel="stylesheet" href="../css/principal.css" />
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../Pages/page1.html" as="document">
+    <link rel="preload" href="../Pages/page2.html" as="document">
+    <link rel="preload" href="../Pages/page3.html" as="document">
+    <link rel="preload" href="../Pages/page4.html" as="document">
+    <link rel="preload" href="../Pages/page5.html" as="document">
+    <link rel="preload" href="../Pages/page6.html" as="document">
+    <link rel="preload" href="../Pages/page7.html" as="document">
+    <link rel="preload" href="../Pages/page8.html" as="document">
+    <link rel="preload" href="../Pages/page9.html" as="document">
+    <link rel="preload" href="../Pages/page10.html" as="document">
+    <link rel="preload" href="../Pages/page11.html" as="document">
+    <link rel="preload" href="../Pages/page12.html" as="document">
+    <link rel="preload" href="../Pages/page13.html" as="document">
+    <link rel="preload" href="../Pages/page14.html" as="document">
+    <link rel="preload" href="../Pages/page15.html" as="document">
+    <link rel="preload" href="../Pages/page16.html" as="document">
+    <link rel="preload" href="../Pages/page17.html" as="document">
+    <link rel="preload" href="../Pages/page18.html" as="document">
+    <link rel="preload" href="../Pages/page19.html" as="document">
+    <link rel="preload" href="../Pages/page20.html" as="document">
+    <link rel="preload" href="../Pages/page21.html" as="document">
+    <link rel="preload" href="../Pages/page22.html" as="document">
+    <link rel="preload" href="../Pages/page23.html" as="document">
+    <link rel="preload" href="../Pages/page24.html" as="document">
+    <link rel="preload" href="../Pages/page25.html" as="document">
+    <link rel="preload" href="../Pages/page26.html" as="document">
+    <link rel="preload" href="../Pages/page27.html" as="document">
+    <link rel="preload" href="../Pages/page28.html" as="document">
+    <link rel="preload" href="../Pages/page29html" as="document">
+    <link rel="preload" href="../Pages/page30.html" as="document">
+    <link rel="preload" href="../Pages/page30.html" as="document">
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <body id="myvideo">
@@ -304,79 +337,5 @@
         </div>
     </div>
 </body>
-<script>
-    const totalPaginas = 32;
-    //IMPORTANTE! - a composiçao do link tem que ser /Pages/paginax.html sempre
-
-    function nextPage() {
-        const arrayOfStrings = document.getElementById("iframe").src.split("/");
-        const idx = arrayOfStrings.indexOf("Pages") + 1;
-        const nextPage = parseInt(arrayOfStrings[idx].replace(/\D/gim, ""), 10) + 1;
-        if (nextPage <= totalPaginas) {
-            arrayOfStrings[idx] = "page" + nextPage + ".html";
-            const srcString = arrayOfStrings.join("/");
-            document.getElementById("iframe").src = srcString;
-            document.getElementById("paginaAtual").innerHTML = ("00" + nextPage).slice(-2);
-        }
-    }
-
-    function previousPage() {
-        const arrayOfStrings = document.getElementById("iframe").src.split("/");
-        const idx = arrayOfStrings.indexOf("Pages") + 1;
-        const previousPage = parseInt(arrayOfStrings[idx].replace(/\D/gim, ""), 10) - 1;
-        if (previousPage >= 1) {
-            arrayOfStrings[idx] = "page" + previousPage + ".html";
-            const srcString = arrayOfStrings.join("/");
-            document.getElementById("iframe").src = srcString;
-            document.getElementById("paginaAtual").innerHTML = ("00" + previousPage).slice(-2);
-        }
-    }
-
-    function openFullscreen() {
-        var elem = document.getElementById("myvideo");
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) {
-            /* Firefox */
-            elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) {
-            /* Chrome, Safari e Opera */
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-            /* IE/Edge */
-            elem.msRequestFullscreen();
-        }
-
-        screen.orientation.lock("landscape");
-    }
-
-    function gotoPage(page) {
-        const arrayOfStrings = document.getElementById("iframe").src.split("/");
-        const idx = arrayOfStrings.indexOf("Pages") + 1;
-        const previousPage = page;
-        // if (previousPage >= 1) {
-        arrayOfStrings[idx] = "page" + previousPage + ".html";
-        const srcString = arrayOfStrings.join("/");
-        document.getElementById("iframe").src = srcString;
-        document.getElementById("paginaAtual").innerHTML = ("00" + previousPage).slice(-2);
-        // }
-    }
-
-    function chamaMenu() {
-        const menu = document.getElementById('menu');
-        if (menu.classList.contains('right-outscreen-translated')) {
-            document.getElementById('menu').classList.remove('right-outscreen-translated');
-        } else {
-            document.getElementById('menu').classList.add('right-outscreen-translated');
-        }
-    }
-
-    function removeClasseFS() {
-        openFullscreen();
-        document.getElementById('tudo').classList.remove('displayNone')
-        document.getElementById('menu').classList.remove('displayNone')
-        document.getElementById('overlay').classList.add('displayNone')
-    }
-</script>
 
 </html>

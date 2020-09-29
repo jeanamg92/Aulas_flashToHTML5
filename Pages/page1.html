@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="../css/canvasDefault.css" />
     <link rel="stylesheet" href="../css/default.css" />
     <link rel="stylesheet" href="../css/page1.css" />
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 <div class="presentation-area">
     <div class="subTitulo">INTRODUÇÃO</div>
@@ -35,19 +37,4 @@
                 Sempre marcou presença na vida do ser humano, desde os tempos antigos até os dias de hoje, porém, suas transformações são renovadas a cada dia, auxiliando assim cada vez mais o conhecimento envoldido.
             </div>
             <script>
-                function sleep(milliseconds) {
-                    var start = new Date().getTime();
-                    for (var i = 0; i < 1e7; i++) {
-                        if ((new Date().getTime() - start) > milliseconds) {
-                            break;
-                        }
-                    }
-                }
-
-                function retiraClasse(text) {
-                    document.getElementById('' + text).classList.add('showColor');
-                    sleep(100)
-                    document.getElementById('' + text).classList.remove('left-outscreen-translated');
-
-                }
             </script>

@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="../css/canvasDefault.css" />
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/page16.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
@@ -33,20 +35,4 @@
         </button>
             <div id='text3' style="color: transparent;" class="content left-outscreen-translated noInteraction"> Na área das exatas, tudo é certo, portanto, se o resultado não for o exato, o cálculo nunca terminará.</div>
             <script>
-                function sleep(milliseconds) {
-                    var start = new Date().getTime();
-                    for (var i = 0; i < 1e7; i++) {
-                        if ((new Date().getTime() - start) > milliseconds) {
-                            break;
-                        }
-                    }
-                }
-
-                function retiraClasse(text) {
-                    // console.log(text);
-                    document.getElementById('' + text).classList.add('showColor');
-                    sleep(100)
-                    document.getElementById('' + text).classList.remove('left-outscreen-translated');
-
-                }
             </script>

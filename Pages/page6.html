@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="../css/canvasDefault.css" />
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/page6.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
@@ -32,20 +34,4 @@
         </button>
             <div id='text3' style="color: transparent;" class="content left-outscreen-translated noInteraction"> Essa operação é simbolizada por <b>a - b = c</b>, ou seja, o <b>minuendo</b> menos o <b>subtraendo</b> é igual ao <b>restante</b> que sobra e também pode ser representada pelo sinal (-). </div>
             <script>
-                function sleep(milliseconds) {
-                    var start = new Date().getTime();
-                    for (var i = 0; i < 1e7; i++) {
-                        if ((new Date().getTime() - start) > milliseconds) {
-                            break;
-                        }
-                    }
-                }
-
-                function retiraClasse(text) {
-                    // console.log(text);
-                    document.getElementById('' + text).classList.add('showColor');
-                    sleep(100)
-                    document.getElementById('' + text).classList.remove('left-outscreen-translated');
-
-                }
             </script>
