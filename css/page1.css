@@ -15,10 +15,8 @@ button {
     /* display: flex; */
     /* color: red; */
     -webkit-transform: translateX(0%);
-    -ms-transform: translateX(0%);
     transform: translateX(0%);
     -webkit-transition: all ease-out 1s;
-    -o-transition: all ease-out 1s;
     transition: all ease-out 1s;
     padding: 12px;
 }

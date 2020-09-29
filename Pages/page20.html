@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../js/atvScriptsPage20.js" as="script">
     <link rel="preload" href="../css/canvasDefault.css" as="style" />
     <link rel="preload" href="../css/default.css" as="style" />
     <link rel="preload" href="../css/page20.css" as="style" />
@@ -10,6 +11,8 @@
     <link rel="stylesheet" href="../css/default.css" />
     <link rel="stylesheet" href="../css/page20.css" />
     <script type="text/javascript" src="../js/scripts.js"></script>
+    <script type="text/javascript" src="../js/atvScriptsPage20.js"></script>
+
 </head>
 
 <div class="presentation-area">
@@ -22,57 +25,38 @@
     <div class="quadradoVerdeAtv">
         <div class="tudo">
             <div class="coluna fonteOp">
-                <div class="operador" id="+" draggable="true" ondragstart="dragStart(event)">+</div>
-                <div class="operador" id="-" draggable="true" ondragstart="dragStart(event)">-</div>
-                <div class="operador" id="*" draggable="true" ondragstart="dragStart(event)">×</div>
-                <div class="operador" id="/" draggable="true" ondragstart="dragStart(event)">÷</div>
+                <div class="draggable operador" draggable="true">+</div>
+                <div class="draggable operador" draggable="true">-</div>
+                <div class="draggable operador" draggable="true">×</div>
+                <div class="draggable operador" draggable="true">÷</div>
             </div>
             <div class="coluna">
                 <div class="calculoAtv"> <label for="" style="color: transparent;">0</label> 13
-                    <div class="quadradoOp" ondrop="drop(event, '*')" ondragover="allowDrop(event)"></div> 6 = 78 </div>
+                    <div class="dropable quadradoOp"></div> 6 = 78 </div>
                 <div class="calculoAtv"> 500
-                    <div class="quadradoOp" ondrop="drop(event, '/')" ondragover="allowDrop(event)"></div> 2 = 250 </div>
+                    <div class="dropable quadradoOp"></div> 2 = 250 </div>
                 <div class="calculoAtv"> 279
-                    <div class="quadradoOp" ondrop="drop(event, '-')" ondragover="allowDrop(event)"></div> 63 = 216 </div>
+                    <div class="dropable quadradoOp"></div> 63 = 216 </div>
                 <div class="calculoAtv"> 800
-                    <div class="quadradoOp" ondrop="drop(event, '+')" ondragover="allowDrop(event)"></div> 37 = 837 </div>
+                    <div class="dropable quadradoOp"></div> 37 = 837 </div>
                 <div class="calculoAtv"> 511
-                    <div class="quadradoOp" ondrop="drop(event, '+')" ondragover="allowDrop(event)"></div> 115 = 626 </div>
+                    <div class="dropable quadradoOp"></div> 115 = 626 </div>
             </div>
             <div class="coluna">
                 <div class="calculoAtv"> 400
-                    <div class="quadradoOp" ondrop="drop(event, '+')" ondragover="allowDrop(event)"></div> 232 = 632 </div>
+                    <div class="dropable quadradoOp"></div> 232 = 632 </div>
                 <div class="calculoAtv"> 509
-                    <div class="quadradoOp" ondrop="drop(event, '-')" ondragover="allowDrop(event)"></div> 98 = 411 </div>
+                    <div class="dropable quadradoOp"></div> 98 = 411 </div>
                 <div class="calculoAtv"> 600
-                    <div class="quadradoOp" ondrop="drop(event, '*')" ondragover="allowDrop(event)"></div> 0 = 0 </div>
+                    <div class="dropable quadradoOp"></div> 0 = 0 </div>
                 <div class="calculoAtv"> 333
-                    <div class="quadradoOp" ondrop="drop(event, '/')" ondragover="allowDrop(event)"></div> 3 = 111 </div>
+                    <div class="dropable quadradoOp"></div> 3 = 111 </div>
                 <div class="calculoAtv"> <label for="" style="color: transparent;">0</label>45
-                    <div class="quadradoOp" ondrop="drop(event, '/')" ondragover="allowDrop(event)"></div> 9 = 5 </div>
+                    <div class="dropable quadradoOp"></div> 9 = 5 </div>
             </div>
             <script>
             </script>
 
             <!-- game -->
             <script>
-                function allowDrop(ev) {
-                    ev.preventDefault();
-                }
-
-                function dragStart(ev) {
-                    ev.dataTransfer.setData("Text", ev.target.id);
-                }
-
-                function drop(ev, x) {
-                    var operacao = ev.dataTransfer.getData("Text");
-                    if (operacao == x) {
-                        ev.target.appendChild(document.getElementById(operacao));
-                        ev.preventDefault();
-                        console.log("Acertou");
-                    } else {
-                        console.log("Errou");
-                        return
-                    }
-                }
             </script>

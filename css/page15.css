@@ -159,7 +159,6 @@ button {
 
 .left-outscreen-translated {
     -webkit-transform: translateX(-50%) !important;
-    -ms-transform: translateX(-50%) !important;
     transform: translateX(-50%) !important;
     z-index: -1;
     color: rgba(0, 0, 0, 0);

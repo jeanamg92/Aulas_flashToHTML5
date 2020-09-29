@@ -66,6 +66,8 @@
 }
 
 .presentation-area .click-texto {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
     align-items: center !important;
 }
 
@@ -123,7 +125,6 @@
 
 .coluna.textoDiv2 img {
     -webkit-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
     transform: scaleX(-1);
     -webkit-filter: FlipH;
     filter: FlipH;
@@ -201,7 +202,6 @@ button {
 
 .left-outscreen-translated {
     -webkit-transform: translateX(-50%) !important;
-    -ms-transform: translateX(-50%) !important;
     transform: translateX(-50%) !important;
     z-index: -1;
     color: rgba(0, 0, 0, 0);

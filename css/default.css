@@ -6,11 +6,11 @@ body {
     color: white;
     overflow-x: hidden;
     overflow-y: hidden;
-    background-image: url("../img/fundo.jpg");
+    /* background-image: url("../img/fundo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-size: cover;
+    background-position: bottom;
+    background-size: cover; */
 }
 
 
@@ -19,7 +19,6 @@ body {
 .left-outscreen-translated {
     /* color: transparent !important; */
     -webkit-transform: translateX(-600%) !important;
-    -ms-transform: translateX(-600%) !important;
     transform: translateX(-600%) !important;
 }
 
@@ -115,7 +114,7 @@ body {
     justify-content: center;
     margin: auto;
     margin-left: 10px;
-    margin-top: 0.2vh;
+    margin-top: 1.2vh;
     background-color: rgb(117, 191, 66);
     font-weight: bold;
     /* max-width: 172px; */
@@ -125,8 +124,14 @@ body {
 }
 
 .tituloEnunciado {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 40vw;
     height: 11vh;
@@ -173,10 +178,8 @@ body {
 
 .content {
     -webkit-transform: translateX(0%);
-    -ms-transform: translateX(0%);
     transform: translateX(0%);
     -webkit-transition: all ease-out 0.7s;
-    -o-transition: all ease-out 0.7s;
     transition: all ease-out 0.7s;
     padding: 1vh;
 }
@@ -192,7 +195,7 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    padding: 2vh;
+    /* padding: 2vh; */
 }
 
 .presentation-area .quadradoVerde .operacao {
@@ -254,6 +257,8 @@ body {
 
 .presentation-area .click-texto.opFonte {
     font-size: 20vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
