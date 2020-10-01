@@ -27,7 +27,7 @@
     height: 100vh;
     left: 0;
     top: 0;
-    background-color: rgba(12, 12, 11, 0.534);
+    background-color: rgba(153, 4, 4, 0.76);
     display: none;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -36,7 +36,7 @@
     -ms-flex-align: center;
     align-items: center;
     color: white;
-    font-size: 22px;
+    font-size: 4vh;
     font-weight: bold;
     font-family: sans-serif;
     -webkit-box-orient: vertical;

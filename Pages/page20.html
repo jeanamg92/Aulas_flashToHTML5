@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="../css/canvasDefault.css" />
     <link rel="stylesheet" href="../css/default.css" />
     <link rel="stylesheet" href="../css/page20.css" />
-    <script type="text/javascript" src="../js/scripts.js"></script>
-    <script type="text/javascript" src="../js/atvScriptsPage20.js"></script>
 
 </head>
 
@@ -24,39 +22,40 @@
 
     <div class="quadradoVerdeAtv">
         <div class="tudo">
+            <img src="../img/errou.png" alt="" class="errou naoMostra" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertou">
+            <div alt="" class="" id="parabens"> </div>
             <div class="coluna fonteOp">
-                <div class="draggable operador" draggable="true">+</div>
-                <div class="draggable operador" draggable="true">-</div>
-                <div class="draggable operador" draggable="true">×</div>
-                <div class="draggable operador" draggable="true">÷</div>
+                <div class="draggable operador" id="+" draggable="true">+</div>
+                <div class="draggable operador" id="-" draggable="true">-</div>
+                <div class="draggable operador" id="×" draggable="true">×</div>
+                <div class="draggable operador" id="÷" draggable="true">÷</div>
             </div>
             <div class="coluna">
                 <div class="calculoAtv"> <label for="" style="color: transparent;">0</label> 13
-                    <div class="dropable quadradoOp"></div> 6 = 78 </div>
+                    <div class="dropable quadradoOp" result="×"></div> 6 = 78 </div>
                 <div class="calculoAtv"> 500
-                    <div class="dropable quadradoOp"></div> 2 = 250 </div>
+                    <div class="dropable quadradoOp" result="÷"></div> 2 = 250 </div>
                 <div class="calculoAtv"> 279
-                    <div class="dropable quadradoOp"></div> 63 = 216 </div>
+                    <div class="dropable quadradoOp" result="-"></div> 63 = 216 </div>
                 <div class="calculoAtv"> 800
-                    <div class="dropable quadradoOp"></div> 37 = 837 </div>
+                    <div class="dropable quadradoOp" result="+"></div> 37 = 837 </div>
                 <div class="calculoAtv"> 511
-                    <div class="dropable quadradoOp"></div> 115 = 626 </div>
+                    <div class="dropable quadradoOp" result="+"></div> 115 = 626 </div>
             </div>
             <div class="coluna">
                 <div class="calculoAtv"> 400
-                    <div class="dropable quadradoOp"></div> 232 = 632 </div>
+                    <div class="dropable quadradoOp" result="+"></div> 232 = 632 </div>
                 <div class="calculoAtv"> 509
-                    <div class="dropable quadradoOp"></div> 98 = 411 </div>
+                    <div class="dropable quadradoOp" result="-"></div> 98 = 411 </div>
                 <div class="calculoAtv"> 600
-                    <div class="dropable quadradoOp"></div> 0 = 0 </div>
+                    <div class="dropable quadradoOp" result="×"></div> 0 = 0 </div>
                 <div class="calculoAtv"> 333
-                    <div class="dropable quadradoOp"></div> 3 = 111 </div>
+                    <div class="dropable quadradoOp" result="÷"></div> 3 = 111 </div>
                 <div class="calculoAtv"> <label for="" style="color: transparent;">0</label>45
-                    <div class="dropable quadradoOp"></div> 9 = 5 </div>
+                    <div class="dropable quadradoOp" result="÷"></div> 9 = 5 </div>
             </div>
-            <script>
-            </script>
 
             <!-- game -->
-            <script>
-            </script>
+            <script type="text/javascript" src="../js/scripts.js"></script>
+            <script type="text/javascript" src="../js/atvScriptsPage20.js"></script>
