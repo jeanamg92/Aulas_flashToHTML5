@@ -79,11 +79,11 @@ function drop(event) {
         return
     }
 
-    if (window.acertos == 1) {
+    if (window.acertos == droppableElements.length) {
         setTimeout(function() {
+            audio.play()
             parabens.classList.remove("naoMostra")
             parabens.classList.add("parabens")
-            audio.play()
         }, 1000);
 
         setTimeout(function() {
