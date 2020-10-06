@@ -4,9 +4,19 @@ const totalPaginas = 32;
 function nextPage() {
     const arrayOfStrings = document.getElementById("iframe").src.split("/");
     const idx = arrayOfStrings.indexOf("Pages") + 1;
-    const nextPage = parseInt(arrayOfStrings[idx].replace(/\D/gim, ""), 10) + 1;
+
+    var nextPage = parseInt(arrayOfStrings[idx].replace(/\D/gim, ""), 10) + 1;
+
+    if (nextPage.toString().length >= 3) {
+        const nextPageStr = nextPage.toString().split('')
+        const nextObj = nextPageStr.slice(1, 3)
+        const nextPageStringfy = JSON.stringify(nextObj)
+        nextPage = parseInt(nextPageStringfy.replace(/\D/gim, ""), 10);
+    }
+
     if (nextPage <= totalPaginas) {
         arrayOfStrings[idx] = "page" + nextPage + ".html";
+        // console.log(arrayOfStrings[idx])
         const srcString = arrayOfStrings.join("/");
         document.getElementById("iframe").src = srcString;
         document.getElementById("paginaAtual").innerHTML = ("00" + nextPage).slice(-2);
@@ -16,7 +26,16 @@ function nextPage() {
 function previousPage() {
     const arrayOfStrings = document.getElementById("iframe").src.split("/");
     const idx = arrayOfStrings.indexOf("Pages") + 1;
-    const previousPage = parseInt(arrayOfStrings[idx].replace(/\D/gim, ""), 10) - 1;
+
+    var previousPage = parseInt(arrayOfStrings[idx].replace(/\D/gim, ""), 10) - 1;
+
+    if (previousPage.toString().length >= 3) {
+        const previousPageStr = previousPage.toString().split('')
+        const nextObj = previousPageStr.slice(1, 3)
+        const previousPageStringfy = JSON.stringify(nextObj)
+        previousPage = parseInt(previousPageStringfy.replace(/\D/gim, ""), 10);
+    }
+
     if (previousPage >= 1) {
         arrayOfStrings[idx] = "page" + previousPage + ".html";
         const srcString = arrayOfStrings.join("/");

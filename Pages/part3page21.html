@@ -22,16 +22,16 @@
         <div class="textoEnunciado"> Em seguida, serão apresentadas alguns problemas matemáticos. Clique no sinal correspondente ao problema e depois selecione a resposta correta. </div>
     </div>
 
-    <div class="quadradoVerdeAtv Part4 " id="quadradoVerdeAtvPart4">
-        <label for="" class="enunciadoQuadradoVerde" id="enunciadoQuadradoVerde"> Brenda está preparando os brinquedos em 3 caixas organizadas da seguinte maneira: Uma caixa para jogos, uma caixa para bonecas, uma caixa para eletrônicos. Ao todo, ela colocou dentro de cada caixa, 18 brinquedos. Qual a quantidade total de brinquedos de Brenda?</label>
-        <!-- <div id="nextStepAtv4" class="setinhaQuadradoVerde next naoMostra" onclick="nextStepAtv(0);">
+    <div class="quadradoVerdeAtv Part3" id="quadradoVerdeAtvPart3">
+        <label for="" class="enunciadoQuadradoVerde" id="enunciadoQuadradoVerde"> Lúcia doi sorteada em uma promoção e ganhou, de brinde, 900 revistinha em quadrinhos. Ela resolveu dividi-las com os 30 coleguinhas da turma. Quantas revistinhas cada um irá receber?</label>
+        <div id="nextStepAtv1" class="setinhaQuadradoVerde next naoMostra" onclick="nextStepAtv(4);">
             <div class="camadaBranca">
                 <div class="camadaVerde">
                     <div class="setinha"></div>
                 </div>
             </div>
-        </div> -->
-        <div id="previouStepAtv1" class="setinhaQuadradoVerdeEsquerda" onclick="previousStepAtv(3);">
+        </div>
+        <div id="previouStepAtv1" class="setinhaQuadradoVerdeEsquerda" onclick="previousStepAtv(2);">
             <div class="camadaBranca">
                 <div class="camadaVerde">
                     <div class="setinhaEsquerda"></div>
@@ -41,18 +41,23 @@
         <div class="tudo flexColumn">
             <img src="../img/errou.png" alt="" class="errou naoMostra" id="errou">
             <img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertou">
-            <div alt="" class="naoMostra" id="parabens"> </div>
+            <!-- <div alt="" class="naoMostra" id="parabens"> </div> -->
             <div class="row fonteOp" id="rowOp">
                 <div class="operadorAtv" id="+">+<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
                 <div class="operadorAtv" id="-">-<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
-                <div class="operadorAtv" id="correto">×<img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
-                <div class="operadorAtv" id="÷">÷<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="×">×<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="correto">÷<img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
             </div>
 
             <div id="alternativas" style="color: transparent;" class="alternativasAtv content bottom-outscreen-translated">
-                <div id="6" class="alternativa">
+                <div id="correto" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+                    30
+                </div>
+
+                <div id="300" class="alternativa">
                     <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
-                    6
+                    300
                 </div>
 
                 <div id="3" class="alternativa">
@@ -60,19 +65,13 @@
                     3
                 </div>
 
-                <div id="30" class="alternativa">
+                <div id="600" class="alternativa">
                     <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
-                    30
-                </div>
-
-                <div id="correto" class="alternativa">
-                    <div class="circuloAlternativa"><img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
-                    54
+                    600
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- game -->
-<script type="text/javascript" src="../js/scripts.js"></script>
-<script type="text/javascript" src="../js/atvScriptsPage21.js"></script>
+    <!-- game -->
+    <script type="text/javascript" src="../js/scripts.js"></script>
+    <script type="text/javascript" src="../js/atvScriptsPage21.js"></script>

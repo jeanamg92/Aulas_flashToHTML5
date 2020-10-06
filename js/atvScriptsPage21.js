@@ -8,6 +8,9 @@ const nextStepAtv1 = document.getElementById('nextStepAtv1');
 
 const enunciado = document.getElementById("enunciadoQuadradoVerde");
 
+const parabens = document.getElementById("parabens")
+const audio = document.getElementById("audioParabens");
+
 window.count = 0
 
 operadores.forEach(elem => {
@@ -45,9 +48,16 @@ function click() {
             setTimeout(function() {
                 nextStepAtv1.classList.remove('fade-in')
                 nextStepAtv1.classList.remove('naoMostra')
-                    // previouStepAtv1.classList.remove('naoMostra');
-
             }, 500);
+            setTimeout(function() {
+                audio.play()
+                parabens.classList.remove("naoMostra")
+                parabens.classList.add("parabens")
+            }, 1000);
+
+            setTimeout(function() {
+                parabens.classList.add("naoMostra")
+            }, 4000);
             window.count = 0
         }
         // se nao bate com as respostas entra aqui, tira a classe naoMostra da imagem de erro mostrando eval, depois adiciona ela denovo
@@ -65,16 +75,16 @@ function click() {
 function nextStepAtv(step) {
 
     if (step == 2) {
-        parent.document.getElementById('iframe').src = "../Pages/page21Part2.html"
+        parent.document.getElementById('iframe').src = "../Pages/part2page21.html"
             // previouStepAtv1.classList.remove('naoMostra');
 
 
     } else if (step == 3) {
-        parent.document.getElementById('iframe').src = "../Pages/page21Part3.html"
+        parent.document.getElementById('iframe').src = "../Pages/part3page21.html"
             // previouStepAtv1.classList.remove("naoMostra");
 
     } else if (step == 4) {
-        parent.document.getElementById('iframe').src = "../Pages/page21Part4.html"
+        parent.document.getElementById('iframe').src = "../Pages/part4page21.html"
             // previouStepAtv1.classList.remove("naoMostra");
     } else if (step == 1) {
         parent.document.getElementById('iframe').src = "../Pages/page21.html"
@@ -85,15 +95,15 @@ function nextStepAtv(step) {
 function previousStepAtv(step) {
 
     if (step == 2) {
-        parent.document.getElementById('iframe').src = "../Pages/page21Part2.html"
+        parent.document.getElementById('iframe').src = "../Pages/part2page21.html"
         nextStepAtv1.classList.remove('naoMostra')
 
     } else if (step == 3) {
-        parent.document.getElementById('iframe').src = "../Pages/page21Part3.html"
+        parent.document.getElementById('iframe').src = "../Pages/part3page21.html"
         nextStepAtv1.classList.remove('naoMostra')
 
     } else if (step == 4) {
-        parent.document.getElementById('iframe').src = "../Pages/page21Part4.html"
+        parent.document.getElementById('iframe').src = "../Pages/part4page21.html"
     } else if (step == 1) {
         nextStepAtv1.classList.remove('naoMostra')
 
