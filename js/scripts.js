@@ -87,3 +87,19 @@ function retiraClasse(text) {
     document.getElementById('' + text).classList.remove('left-outscreen-translated');
 
 }
+
+function retiraClasseAtv(text) {
+    // console.log(text);
+    document.getElementById('' + text).classList.add('showColor');
+    sleep(100)
+    document.getElementById('' + text).classList.remove('bottom-outscreen-translated');
+
+}
+
+function addClasseAtv(text) {
+    // console.log(text);
+    document.getElementById('' + text).classList.remove('showColor');
+    sleep(100)
+    document.getElementById('' + text).classList.add('bottom-outscreen-translated');
+
+}
