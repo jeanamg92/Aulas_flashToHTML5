@@ -1,0 +1,63 @@
+.tudo .quadrado {
+    width: 63vh;
+    height: auto;
+    /* background-color: lightblue; */
+    display: flex;
+    flex-direction: row;
+}
+
+.tudo .quadrado .colunaNumGrande {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-items: center;
+    font-size: 10vh;
+    color: rgb(164, 214, 133);
+}
+
+.tudo .coluna {
+    margin: auto;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.tudo .quadrado .colunaCalc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tudo .quadrado .colunaCalc .calcEimagem {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    height: 8vh;
+}
+
+.tudo .quadrado .colunaCalc .calc {
+    width: 24vh;
+    height: 100%;
+    border-left: solid 0.7vh white;
+    border-bottom: solid 0.7vh white;
+    display: flex;
+    align-items: center;
+    /* justify-items: center; */
+    color: white;
+    font-size: 5.3vh;
+    padding-left: 4vh;
+    cursor: pointer;
+}
+
+.tudo .quadrado .colunaCalc #acertoOuErro {
+    width: 9vh;
+    height: 9vh;
+    float: right;
+}
+
+.lastCalc {
+    border-bottom: 0 !important;
+}
