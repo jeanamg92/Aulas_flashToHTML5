@@ -45,6 +45,8 @@
     .fonteOp {
         font-size: 15vh;
         cursor: hand;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
     
