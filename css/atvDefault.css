@@ -99,6 +99,7 @@ body {
     height: 20vh;
     margin-left: 36vw;
     margin-top: 21vh;
+    z-index: 999;
 }
 
 .naoMostra {
@@ -197,4 +198,10 @@ body {
     /* color: transparent !important; */
     -webkit-transform: translateX(600%) !important;
     transform: translateY(600%) !important;
+}
+
+.up-outscreen-translated {
+    /* color: transparent !important; */
+    -webkit-transform: translateX(-600%) !important;
+    transform: translateY(-600%) !important;
 }

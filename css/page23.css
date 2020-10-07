@@ -11,11 +11,11 @@
     display: flex;
     justify-content: center;
     border: 0.6vh solid rgb(164, 214, 133);
-    width: 14vw;
+    width: 16vw;
     border-radius: 0.6vh;
     height: 8vh;
     align-items: center;
-    font-size: 3vh;
+    font-size: 4.5vh;
     cursor: hand;
     margin: 0.5vh;
 }
@@ -26,6 +26,7 @@
     justify-content: center;
     width: 56%;
     flex-direction: column;
+    font-size: 9vh;
 }
 
 .operacoesDivisao {
@@ -53,10 +54,11 @@
     align-items: center;
     font-size: 2.2vh;
     height: 7vh;
-    width: 14vw;
+    width: 16vw;
     height: 8vh;
-    font-size: 3vh;
+    font-size: 4.5vh;
     cursor: hand;
+    margin-left: 0.5vw;
 }
 
 .divisorTexto {
@@ -72,7 +74,7 @@
 
 .quadradoOp {
     margin-left: 5vh;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
 }
 
 .first {
@@ -98,10 +100,16 @@
 }
 
 .operacoes {
+    position: absolute;
     display: flex;
     flex-direction: column;
 }
 
 .second {
     border-bottom: 0.6vh solid;
+}
+
+.transparent {
+    border-color: transparent;
+    color: transparent;
 }
