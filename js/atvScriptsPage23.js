@@ -1,113 +1,117 @@
-const draggableElements = document.querySelectorAll(".draggable");
-const droppableElements = document.querySelectorAll(".dropable");
+function getElement(tipo, elem) {
+    if (tipo == "select") {
+        return document.querySelector(elem)
+    } else if (tipo == "id") {
+        return document.getElementById(elem)
+    } else if (tipo == "selectAll") {
+        return document.querySelectorAll(elem)
+    }
+}
 
-const acertou = document.getElementById("acertou");
-const errou = document.getElementById("errou")
+const draggableElements = getElement("selectAll", ".draggable")
+const droppableElements = getElement("selectAll", ".dropable");
 
-const parabens = document.getElementById("parabens")
+const acertouImg = getElement("selectAll", "#acertou");
+const errouImg = getElement("selectAll", "#errou")
+
+const parabens = getElement("id", "parabens")
 const audio = new Audio('../audio/parabens.mp3')
 
 window.acertos = 0
-window.calculo = 1
+
 draggableElements.forEach(elem => {
     elem.addEventListener("dragstart", dragStart);
-    elem.addEventListener("drag", drag);
-    elem.addEventListener("dragend", dragEnd);
 });
 
 droppableElements.forEach(elem => {
-    elem.addEventListener("dragenter", dragEnter);
     elem.addEventListener("dragover", dragOver);
-    elem.addEventListener("dragleave", dragLeave);
     elem.addEventListener("drop", drop);
 });
 
+function chamaCongrats() {
+    setTimeout(function() {
+        audio.play()
+        parabens.classList.remove("naoMostra")
+        parabens.classList.add("parabens")
+    }, 1000);
+
+    setTimeout(function() {
+        parabens.classList.add("naoMostra")
+    }, 4000);
+}
+
+function sobeDiv(divPai) {
+    setTimeout(function() {
+        divPai.classList.add('up-outscreen-translated')
+        var nextOp = Number(divPai.id) + 1;
+        document.getElementById(nextOp).classList.remove('transparent', 'bottom-outscreen-translated')
+    }, 1250);
+}
+
+function acertou(img, elemento, itemDraggable) {
+
+    itemDraggable.classList.add('transparent')
+    itemDraggable.style.pointerEvents = "none"
+    itemDraggable.removeAttribute('draggable')
+
+    img[0].classList.add('fade-in')
+    img[0].classList.remove('naoMostra')
+
+    elemento.style.opacity = "0.7"
+    elemento.style.pointerEvents = "none"
+    setTimeout(function() {
+        img[0].classList.add("naoMostra")
+    }, 1000);
+
+
+}
+
+function errou(img) {
+    img[0].classList.add('fade-in')
+    img[0].classList.remove('naoMostra')
+
+    setTimeout(function() {
+        img[0].classList.add('naoMostra')
+    }, 1000);
+}
+
 // funcoes drag and drop
 function dragStart(event) {
+    // leva o id do iten que esta sendo arrastado
     event.dataTransfer.setData("text", event.target.id);
-}
-
-function drag(event) {
-
-}
-
-function dragEnd(event) {
-
-}
-
-function dragEnter(event) {
-
 }
 
 function dragOver(event) {
     event.preventDefault();
 }
 
-function dragLeave(event) {
-
-}
-
 function drop(event) {
     event.preventDefault();
+    // draggable    
+    var itemDraggable = getElement("select", '.colunaElementos > #' + event.dataTransfer.getData("text"));
+    console.log(itemDraggable)
+        //dropable
+    var targetElem = event.target
+    var divPai = this.parentElement.parentElement
 
-    const draggableElementData = event.dataTransfer.getData("text")
-    const droppableElementData = event.target.getAttribute("id")
-
-    console.log(draggableElementData)
-    console.log(droppableElementData)
-
-    if (draggableElementData == droppableElementData && event.target.innerHTML == "") {
-        event.target.innerHTML = document.getElementById(draggableElementData).innerHTML
-        event.target.disable = "true"
-        event.target.style.opacity = "0.7"
-
-        document.querySelector('.colunaElementos > #' + draggableElementData).classList.add('transparent')
-        document.querySelector('.colunaElementos > #' + draggableElementData).pointerEvents = "none"
-
-        acertou.classList.remove("naoMostra")
-        setTimeout(function() {
-            acertou.classList.add("naoMostra")
-        }, 1000);
-
+    if (itemDraggable.id == targetElem.id && targetElem.innerHTML == "") {
+        // sobre o item que esta recebendo o outro
+        targetElem.innerHTML = getElement("id", itemDraggable.id).innerHTML
+        acertou(acertouImg, targetElem, itemDraggable)
         window.acertos++
-    } else if (!(draggableElementData == droppableElementData) && event.target.innerHTML == "") {
-        errou.classList.remove("naoMostra")
-        setTimeout(function() {
-            errou.classList.add("naoMostra")
-        }, 1000);
+
+    } else if (!(itemDraggable.id == targetElem.id) && targetElem.innerHTML == "") {
+        errou(errouImg)
     } else {
         return
     }
 
-    var elemento = this.parentElement.parentElement
-
-
-    if (window.acertos == 3 && !(elemento.id == 4)) {
+    if (window.acertos == 3 && !(divPai.id == 4)) {
         window.acertos = 0
-
-        setTimeout(function() {
-            elemento.classList.add('up-outscreen-translated')
-            var nextOp = Number(elemento.id) + 1;
-            document.getElementById(nextOp).classList.remove('transparent', 'bottom-outscreen-translated')
-        }, 1250);
-
-    }
-
-    if (window.acertos == 4) {
-        setTimeout(function() {
-            elemento.classList.add('up-outscreen-translated')
-            var nextOp = Number(elemento.id) + 1;
-            document.getElementById(nextOp).classList.remove('transparent', 'bottom-outscreen-translated')
-        }, 1250);
-        setTimeout(function() {
-            audio.play()
-            parabens.classList.remove("naoMostra")
-            parabens.classList.add("parabens")
-        }, 1000);
-
-        setTimeout(function() {
-            parabens.classList.add("naoMostra")
-        }, 4000);
+        sobeDiv(divPai)
+    } else if (window.acertos == 4 && (divPai.id == 4)) {
+        sobeDiv(divPai)
+        chamaCongrats()
     }
 
 }
