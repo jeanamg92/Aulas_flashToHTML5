@@ -1,0 +1,120 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../js/atvScriptsPage20.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page23.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page23.css" />
+    <link rel="stylesheet" href="../css/atvDefault.css" />
+
+
+</head>
+
+<div class="presentation-area">
+    <div class="subTituloAtv">ATIVIDADE: Identificar Termos das Operações</div>
+    <div class="tituloEnunciado">
+        <div class="circuloEnunciado">4</div>
+        <div class="textoEnunciado"> Observe as operações e arraste até cada elemento a classificação exata. </div>
+    </div>
+
+    <div class="quadradoVerdeAtv">
+        <div class="tudo">
+            <img src="../img/errou.png" alt="" class="errou naoMostra imagemResultado" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra imagemResultado" id="acertou">
+            <div alt="" class="naoMostra" id="parabens"> </div>
+
+            <div class="colunaElementos">
+                <div class="quadradoElementos" id="Subtraendo">Subtraendo</div>
+                <div class="quadradoElementos" id="Divisor">Divisor</div>
+                <div class="quadradoElementos" id="Produto">Produto</div>
+                <div class="quadradoElementos" id="Resto">Resto</div>
+                <div class="quadradoElementos" id="Diferença ou resto">Diferença ou resto</div>
+                <div class="quadradoElementos" id="Multiplicador">Multiplicador</div>
+                <div class="quadradoElementos" id="Multiplicando">Multiplicando</div>
+                <div class="quadradoElementos" id="1ª Parcela">1ª Parcela</div>
+                <div class="quadradoElementos" id="2ª Parcela">2ª Parcela</div>
+                <div class="quadradoElementos" id="Resultado">Resultado</div>
+                <div class="quadradoElementos" id="Soma ou Total">Soma ou Total</div>
+                <div class="quadradoElementos" id="Minuendo">Minuendo</div>
+                <div class="quadradoElementos" id="Dividendo">Dividendo</div>
+                <div class="quadrado naoMostra" id=""></div>
+
+            </div>
+
+            <div class="colunaoperacoes">
+                <div style="color: transparent;" class="operacoes content bottom-outscreen-translated">
+                    <div class="first row">
+                        <label for="" style="color: transparent;">0</label> 241
+                        <div class="quadrado quadradoOp" id="1ª Parcela"></div>
+                    </div>
+                    <div class="row">
+                        <label for="" class="second">+ 322</label>
+                        <div class="quadrado quadradoOp" id="2ª Parcela"></div>
+                    </div>
+                    <div class="resultado row">
+                        <label for="" style="color: transparent;">0</label>563
+                        <div class="quadrado quadradoOp" id="Soma ou Total"></div>
+                    </div>
+                </div>
+
+                <div style="color: transparent;" class="operacoes content bottom-outscreen-translated">
+                    <div class="first row">
+                        <label for="" style="color: transparent;">0</label> 693
+                        <div class="quadrado quadradoOp" id="Minuendo"></div>
+                    </div>
+                    <div class="row">
+                        <label for="" class="second">- 214</label>
+                        <div class="quadrado quadradoOp" id="Subtraendo"></div>
+                    </div>
+                    <div class="resultado row">
+                        <label for="" style="color: transparent;">0</label>479
+                        <div class="quadrado quadradoOp" id="Diferença ou resto"></div>
+                    </div>
+                </div>
+
+                <div style="color: transparent;" class="operacoes content bottom-outscreen-translated">
+                    <div class="first row">361
+                        <div class="quadrado quadradoOp" id="Multiplicando"></div>
+                    </div>
+                    <div class="row">
+                        <label for="" class="second">x 2</label>
+                        <div class="quadrado quadradoOp" id="Multiplicador"></div>
+                    </div>
+                    <div class="resultado row">
+                        <label for="" style="color: transparent;">0</label>722
+                        <div class="quadrado quadradoOp" id="Produto"></div>
+                    </div>
+                </div>
+
+                <div style="color: transparent;" class="operacoes content bottom-outscreen-translated operacoesDivisao">
+                    <div class="row">
+                        <div class="dividendo quadrado"></div>
+                        <div class="divisorTexto semBorda fontBold">45</div>
+                        <div class="divisorTexto fontBold">5</div>
+                        <div class="divisor quadrado"></div>
+                    </div>
+                    <div class="row">
+                        <div class="quadrado" style="border: transparent;" id=""></div>
+                        <div class="divisorTexto divisorBaixo">-45</div>
+                        <div class="divisorTexto semBorda fontBold">9</div>
+                        <div class="resultado quadrado"></div>
+                    </div>
+                    <div class="row">
+                        <div class="quadrado" style="border: transparent;" id=""></div>
+                        <div class="divisorTexto semBorda fontBold">0</div>
+                        <div class="divisorTexto semBorda" style="color: transparent;">0</div>
+                        <div class="resto quadrado"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- game -->
+    <script type="text/javascript" src="../js/scripts.js"></script>
+    <script type="text/javascript" src="../js/atvScriptsPage23.js"></script>
