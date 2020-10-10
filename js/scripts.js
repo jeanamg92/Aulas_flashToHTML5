@@ -44,23 +44,23 @@ function previousPage() {
     }
 }
 
-function openFullscreen() {
-    var elem = document.getElementById("myvideo");
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) {
-        /* Firefox */
-        elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) {
-        /* Chrome, Safari e Opera */
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) {
-        /* IE/Edge */
-        elem.msRequestFullscreen();
-    }
+// function openFullscreen() {
+//     var elem = document.getElementById("myvideo");
+//     if (elem.requestFullscreen) {
+//         elem.requestFullscreen();
+//     } else if (elem.mozRequestFullScreen) {
+//         /* Firefox */
+//         elem.mozRequestFullScreen();
+//     } else if (elem.webkitRequestFullscreen) {
+//         /* Chrome, Safari e Opera */
+//         elem.webkitRequestFullscreen();
+//     } else if (elem.msRequestFullscreen) {
+//         /* IE/Edge */
+//         elem.msRequestFullscreen();
+//     }
 
-    screen.orientation.lock("landscape");
-}
+//     screen.orientation.lock("landscape");
+// }
 
 function gotoPage(page) {
     const arrayOfStrings = document.getElementById("iframe").src.split("/");
@@ -83,12 +83,14 @@ function chamaMenu() {
     }
 }
 
-function removeClasseFS() {
-    openFullscreen();
-    document.getElementById('tudo').classList.remove('displayNone')
-    document.getElementById('menu').classList.remove('displayNone')
-    document.getElementById('overlay').classList.add('displayNone')
-}
+// function removeClasseFS() {
+//     var elemento = document.getElementById('myvideo')
+//         // console.log(elemento)
+//     openFullscreen(elemento);
+//     document.getElementById('tudo').classList.remove('displayNone')
+//     document.getElementById('menu').classList.remove('displayNone')
+//     document.getElementById('overlay').classList.add('displayNone')
+// }
 
 function sleep(milliseconds) {
     var start = new Date().getTime();

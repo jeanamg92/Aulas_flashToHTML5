@@ -43,6 +43,8 @@
     <link rel="stylesheet" href="../css/canvasDefault.css" />
     <link rel="stylesheet" href="../css/principal.css" />
     <script type="text/javascript" src="../js/scripts.js"></script>
+    <script type="text/javascript" src="../js/DragDropTouch.js"></script>
+
 </head>
 
 <body id="myvideo">
@@ -342,5 +344,71 @@
     </div>
 </body>
 
+<script>
+    var elemento = document.getElementById('myvideo')
+
+    window.addEventListener("fullscreenchange", function(event) {
+        // console.log(event);
+        checkFullScreenRoutine(false);
+    });
+
+    document.querySelector("#myvideo").addEventListener(
+        "click",
+        function() {
+            checkFullScreenRoutine();
+            // checkCorrectRotation();
+        },
+        false
+    );
+
+    function openFullscreen() {
+        var elem = document.getElementById("myvideo");
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+            /* Firefox */
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+            /* Chrome, Safari e Opera */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+            /* IE/Edge */
+            elem.msRequestFullscreen();
+        }
+
+        screen.orientation.lock("landscape");
+    }
+
+    function checkFullScreenRoutine() {
+        var clicked = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+        var overlay = document.getElementById("overlay");
+
+        if (clicked) {
+            overlay.style.display = "none";
+
+            if (!document.fullscreenElement) {
+                openFullscreen(elemento);
+            }
+        } else {
+            if (!document.fullscreenElement) {
+                overlay.style.display = "flex";
+            }
+        }
+
+        // prepareMovie();
+    }
+
+    checkFullScreenRoutine(false);
+
+
+    function removeClasseFS() {
+        // var elemento = document.getElementById('myvideo')
+        // console.log(elemento)
+        openFullscreen();
+        document.getElementById('tudo').classList.remove('displayNone')
+        document.getElementById('menu').classList.remove('displayNone')
+        document.getElementById('overlay').classList.add('displayNone')
+    }
+</script>
 
 </html>
