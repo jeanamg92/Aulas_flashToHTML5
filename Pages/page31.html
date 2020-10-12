@@ -1,0 +1,86 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../js/atvScriptsPage31.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page31.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page31.css" />
+    <link rel="stylesheet" href="../css/atvDefault.css" />
+
+
+</head>
+
+<div class="presentation-area">
+    <div class="subTituloAtv">ATIVIDADE: Reconhecer a Operação Indicada</div>
+    <div class="tituloEnunciado">
+        <div class="circuloEnunciado">1</div>
+        <div class="textoEnunciado"> Em seguida, serão apresentadas algumas operações. Clique e arraste o sinal correspondente á operação. </div>
+    </div>
+
+    <div class="quadradoVerdeAtv">
+        <div class="tudo">
+            <img src="../img/errou.png" alt="" class="errou naoMostra imagemResultado" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra imagemResultado" id="acertou">
+            <div alt="" class="naoMostra" id="parabens"> </div>
+            <div class="numeros">
+                <div class="coluna">
+                    <div class="draggable operador quadradoOp" id="2" draggable="true">2</div>
+                    <div class="draggable operador quadradoOp" id="10" draggable="true">10</div>
+                    <div class="draggable operador quadradoOp" id="14" draggable="true">14</div>
+                    <div class="draggable operador quadradoOp" id="111" draggable="true">111</div>
+                    <div class="draggable operador quadradoOp" id="8" draggable="true">8</div>
+                </div>
+                <div class="coluna">
+                    <div class="draggable operador quadradoOp" id="12" draggable="true">12</div>
+                    <div class="draggable operador quadradoOp" id="9" draggable="true">9</div>
+                    <div class="draggable operador quadradoOp" id="5" draggable="true">5</div>
+                    <div class="draggable operador quadradoOp" id="3" draggable="true">3</div>
+                    <div class="draggable operador quadradoOp" id="1" draggable="true">1</div>
+                </div>
+            </div>
+            <div class="calculos">
+                <div class="coluna">
+                    <div class="calculoAtv">81 ÷ 9 =
+                        <div class="dropable quadradoOp borda" result="9"></div>
+                    </div>
+                    <div class="calculoAtv">
+                        <div class="dropable quadradoOp borda" result="8"></div> x 3 = 24
+                    </div>
+                    <div class="calculoAtv"> 6 x
+                        <div class="dropable quadradoOp borda" result="1"></div> = 6
+                    </div>
+                    <div class="calculoAtv"> 15 - 10 =
+                        <div class="dropable quadradoOp borda" result="5"></div>
+                    </div>
+                    <div class="calculoAtv"> 32 - 18 =
+                        <div class="dropable quadradoOp borda" result="14"></div>
+                    </div>
+                </div>
+                <div class="coluna">
+                    <div class="calculoAtv"> 23 - 11 =
+                        <div class="dropable quadradoOp borda" result="12"></div>
+                    </div>
+                    <div class="calculoAtv"> 400 ÷
+                        <div class="dropable quadradoOp borda" result="10"></div> = 40
+                    </div>
+                    <div class="calculoAtv"> 362 x
+                        <div class="dropable quadradoOp borda" result="2"></div> = 724
+                    </div>
+                    <div class="calculoAtv">
+                        <div class="dropable quadradoOp borda" result="111"></div> x 2 = 222
+                    </div>
+                    <div class="calculoAtv"> 600 ÷
+                        <div class="dropable quadradoOp borda" result="3"></div> = 200
+                    </div>
+                </div>
+            </div>
+
+            <!-- game -->
+            <script type="text/javascript" src="../js/scripts.js"></script>
+            <script type="text/javascript" src="../js/atvScriptsPage31.js"></script>
+            <script type="text/javascript" src="../js/DragDropTouch.js"></script>

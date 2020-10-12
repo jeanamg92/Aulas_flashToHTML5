@@ -83,14 +83,14 @@ function chamaMenu() {
     }
 }
 
-// function removeClasseFS() {
-//     var elemento = document.getElementById('myvideo')
-//         // console.log(elemento)
-//     openFullscreen(elemento);
-//     document.getElementById('tudo').classList.remove('displayNone')
-//     document.getElementById('menu').classList.remove('displayNone')
-//     document.getElementById('overlay').classList.add('displayNone')
-// }
+function removeClasseFS() {
+    var elemento = document.getElementById('myvideo')
+        // console.log(elemento)
+    openFullscreen(elemento);
+    document.getElementById('tudo').classList.remove('displayNone')
+    document.getElementById('menu').classList.remove('displayNone')
+    document.getElementById('overlay').classList.add('displayNone')
+}
 
 function sleep(milliseconds) {
     var start = new Date().getTime();

@@ -348,7 +348,6 @@
     var elemento = document.getElementById('myvideo')
 
     window.addEventListener("fullscreenchange", function(event) {
-        // console.log(event);
         checkFullScreenRoutine(false);
     });
 
@@ -361,7 +360,16 @@
         false
     );
 
-    function openFullscreen() {
+    document.querySelector("iframe").addEventListener(
+        "click",
+        function() {
+            checkFullScreenRoutine();
+            // checkCorrectRotation();
+        },
+        false
+    );
+
+    function openFullscreen(elemento) {
         var elem = document.getElementById("myvideo");
         if (elem.requestFullscreen) {
             elem.requestFullscreen();
@@ -409,6 +417,8 @@
         document.getElementById('menu').classList.remove('displayNone')
         document.getElementById('overlay').classList.add('displayNone')
     }
+</script>
+<script>
 </script>
 
 </html>
