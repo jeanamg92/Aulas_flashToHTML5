@@ -24,7 +24,9 @@ function click() {
     }
 
     if (window.count == 4) {
-        showParabens()
+        setTimeout(function() {
+            showParabens();
+        }, 1000);
     }
 }
 

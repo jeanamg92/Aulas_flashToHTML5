@@ -99,7 +99,9 @@ function drop(event) {
         sobeDiv(divPai)
     } else if (window.acertos == 4 && (divPai.id == 4)) {
         sobeDiv(divPai)
-        showParabens()
+        setTimeout(function() {
+            showParabens();
+        }, 1000);
     }
 
 }

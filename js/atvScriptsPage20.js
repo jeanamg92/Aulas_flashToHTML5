@@ -79,6 +79,8 @@ function drop(event) {
     }
 
     if (window.acertos == droppableElements.length) {
-        showParabens()
+        setTimeout(function() {
+            showParabens();
+        }, 1000);
     }
 }

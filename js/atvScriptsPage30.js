@@ -137,7 +137,9 @@ function click() {
         if (window.count <= 4) {
             showBotaoNext()
         } else {
-            showParabens()
+            setTimeout(function() {
+                showParabens();
+            }, 1000);
         }
 
         // se nao bate com as respostas entra aqui, CHAMA A funcao de mostrar imagem de acerto ou erro

@@ -46,7 +46,9 @@ function click() {
                 nextStepAtv1.classList.remove('fade-in')
                 nextStepAtv1.classList.remove('naoMostra')
             }, 500);
-            showParabens()
+            setTimeout(function() {
+                showParabens();
+            }, 1000);
             window.count = 0
         }
         // se nao bate com as respostas entra aqui, tira a classe naoMostra da imagem de erro mostrando eval, depois adiciona ela denovo
