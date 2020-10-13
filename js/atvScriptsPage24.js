@@ -15,6 +15,7 @@ const acertouImg = getElement("selectAll", "#acertou");
 const errouImg = getElement("selectAll", "#errou")
 
 const audioTrem = new Audio('../audio/trenzinho.mp3')
+audioTrem.preload
 
 window.acertos = 0
 

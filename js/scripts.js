@@ -44,24 +44,6 @@ function previousPage() {
     }
 }
 
-// function openFullscreen() {
-//     var elem = document.getElementById("myvideo");
-//     if (elem.requestFullscreen) {
-//         elem.requestFullscreen();
-//     } else if (elem.mozRequestFullScreen) {
-//         /* Firefox */
-//         elem.mozRequestFullScreen();
-//     } else if (elem.webkitRequestFullscreen) {
-//         /* Chrome, Safari e Opera */
-//         elem.webkitRequestFullscreen();
-//     } else if (elem.msRequestFullscreen) {
-//         /* IE/Edge */
-//         elem.msRequestFullscreen();
-//     }
-
-//     screen.orientation.lock("landscape");
-// }
-
 function gotoPage(page) {
     const arrayOfStrings = document.getElementById("iframe").src.split("/");
     const idx = arrayOfStrings.indexOf("Pages") + 1;
@@ -125,11 +107,12 @@ function addClasseAtv(text) {
 
 }
 
+const sfxParabens = document.getElementById('SFX-parabens');
+sfxParabens.preload
 
 function showParabens(onend = undefined) { //onend = função pra ser chamada depois que o parabens sumir
     document.getElementById('parabens-wrapper').classList.remove('hidden');
 
-    const sfxParabens = document.getElementById('SFX-parabens');
     if (sfxParabens) {
         sfxParabens.currentTime = 0;
         sfxParabens.muted = false;
