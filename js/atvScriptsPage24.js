@@ -14,8 +14,6 @@ const droppableElements = getElement("selectAll", ".dropable");
 const acertouImg = getElement("selectAll", "#acertou");
 const errouImg = getElement("selectAll", "#errou")
 
-const parabens = getElement("id", "parabens")
-const audio = new Audio('../audio/parabens.mp3')
 const audioTrem = new Audio('../audio/trenzinho.mp3')
 
 window.acertos = 0
@@ -28,18 +26,6 @@ droppableElements.forEach(elem => {
     elem.addEventListener("dragover", dragOver);
     elem.addEventListener("drop", drop);
 });
-
-function chamaCongrats() {
-    setTimeout(function() {
-        audio.play()
-        parabens.classList.remove("naoMostra")
-        parabens.classList.add("parabens")
-    }, 3000);
-
-    setTimeout(function() {
-        parabens.classList.add("naoMostra")
-    }, 7000);
-}
 
 function andaTrem(divPai, translate, duration) {
     // pega translate atual
@@ -121,7 +107,9 @@ function drop(event) {
 
     if (window.acertos == 5) {
         andaTrem(divPai, (translate + 100), (transitionDuration + 3));
-        chamaCongrats();
+        setTimeout(function() {
+            showParabens();
+        }, 3200);
     } else {
         return
     }

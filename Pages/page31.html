@@ -16,17 +16,54 @@
 </head>
 
 <div class="presentation-area">
-    <div class="subTituloAtv">ATIVIDADE: Reconhecer a Operação Indicada</div>
+    <div class="subTituloAtv">ATIVIDADE: Identificar Valores</div>
     <div class="tituloEnunciado">
-        <div class="circuloEnunciado">1</div>
-        <div class="textoEnunciado"> Em seguida, serão apresentadas algumas operações. Clique e arraste o sinal correspondente á operação. </div>
+        <div class="circuloEnunciado">8</div>
+        <div class="textoEnunciado"> Observe as operações e arraste até os espaços os valores correspondentes.</div>
     </div>
 
     <div class="quadradoVerdeAtv">
         <div class="tudo">
             <img src="../img/errou.png" alt="" class="errou naoMostra imagemResultado" id="errou">
             <img src="../img/acertou.png" alt="" class="acertou naoMostra imagemResultado" id="acertou">
-            <div alt="" class="naoMostra" id="parabens"> </div>
+            <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed; top: 25%; left: 75%; transform: translate(-50%, -50%); ">
+                <style scoped>
+                    .spritesheet-animation {
+                        width: 300px;
+                        height: 300px;
+                        background-image: url("../img/parabens.png");
+                        animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+                    }
+                    
+                    .hidden {
+                        display: none!important;
+                    }
+                    
+                    @keyframes playX {
+                        from {
+                            background-position-x: 0px;
+                        }
+                        to {
+                            background-position-x: -1500px;
+                        }
+                    }
+                    
+                    @keyframes playY {
+                        from {
+                            background-position-y: 0px;
+                        }
+                        to {
+                            background-position-y: -5100px;
+                        }
+                    }
+                </style>
+                <audio preload="automatic" id="SFX-parabens" muted>
+                  <source src="../audio/parabens.mp3" type="audio/mp3" />
+                </audio>
+                <div class='spritesheet-animation'>
+
+                </div>
+            </div>
             <div class="numeros">
                 <div class="coluna">
                     <div class="draggable operador quadradoOp" id="2" draggable="true">2</div>

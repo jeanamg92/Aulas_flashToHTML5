@@ -13,9 +13,6 @@ const droppableElements = getElement("selectAll", ".dropable");
 const acertouImg = getElement("selectAll", "#acertou");
 const errouImg = getElement("selectAll", "#errou")
 
-const parabens = getElement("id", "parabens")
-const audio = new Audio('../audio/parabens.mp3')
-
 window.acertos = 0
 
 
@@ -45,18 +42,6 @@ function errou(img) {
     }, 1000);
 }
 
-function chamaCongrats() {
-    setTimeout(function() {
-        audio.play()
-        parabens.classList.remove("naoMostra")
-        parabens.classList.add("parabens")
-    }, 1000);
-
-    setTimeout(function() {
-        parabens.classList.add("naoMostra")
-    }, 4000);
-}
-
 draggableElements.forEach(elem => {
     elem.addEventListener("dragstart", dragStart);
 });
@@ -78,48 +63,29 @@ droppableElements.forEach(elem => {
         }
 
         if (window.acertos == droppableElements.length) {
-            chamaCongrats();
+            showParabens();
         }
     });
 });
 
-// function chamaCongrats() {
-//     setTimeout(function() {
-//         audio.play()
-//         parabens.classList.remove("naoMostra")
-//         parabens.classList.add("parabens")
-//     }, 3000);
+function showParabens(onend = undefined) { //onend = função pra ser chamada depois que o parabens sumir
+    document.getElementById('parabens-wrapper').classList.remove('hidden');
 
-//     setTimeout(function() {
-//         parabens.classList.add("naoMostra")
-//     }, 7000);
-// }
+    const sfxParabens = document.getElementById('SFX-parabens');
+    if (sfxParabens) {
+        sfxParabens.currentTime = 0;
+        sfxParabens.muted = false;
+        sfxParabens.volume = 0.85;
+        sfxParabens.play();
+    }
 
-// function acertou(acertouImg, targetElem, itemDraggable) {
+    setTimeout(() => {
+        document.getElementById('parabens-wrapper').classList.add('hidden');
 
-//     itemDraggable.classList.add('transparent')
-//     itemDraggable.style.pointerEvents = "none"
-//     itemDraggable.removeAttribute('draggable')
-
-//     acertouImg[0].classList.add('fade-in')
-//     acertouImg[0].classList.remove('naoMostra')
-
-//     // targetElem.style.opacity = "0.7"
-//     targetElem.style.pointerEvents = "none"
-//     setTimeout(function() {
-//         acertouImg[0].classList.add("naoMostra")
-//     }, 1000);
-
-// }
-
-// function errou(errouImg) {
-//     errouImg[0].classList.add('fade-in')
-//     errouImg[0].classList.remove('naoMostra')
-
-//     setTimeout(function() {
-//         errouImg[0].classList.add('naoMostra')
-//     }, 1000);
-// }
+        if (onend != undefined)
+            onend();
+    }, 4250)
+}
 
 // funcoes drag and drop
 function dragStart(event) {

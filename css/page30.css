@@ -1,0 +1,88 @@
+.quadradoVerdeAtv {
+    justify-content: center;
+}
+
+.pontos {
+    left: 65%;
+    top: 19%;
+    position: absolute;
+    font-size: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* width: 100%;
+    height: 100%; */
+    width: 15%;
+    height: 10%;
+    border: 4px solid rgb(164, 214, 133);
+    border-radius: 16px;
+    background-color: rgba(0, 121, 10, 1);
+    /* padding: 1vh; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.enunciado {
+    font-size: 5vh;
+}
+
+.pontos span {
+    margin-right: 3vh;
+}
+
+.perguntaEresposta {
+    margin: auto;
+    margin-left: 0;
+    margin-top: 1%;
+    /* width: 73%; */
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 4vh;
+}
+
+.alternativa {
+    font-size: 3vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    /* justify-content: center; */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: hand;
+}
+
+.circuloAlternativa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border: 0.8vh solid rgb(164, 214, 133);
+    border-radius: 16vh;
+    width: 6vh;
+    height: 6vh;
+    margin-right: 2vh;
+    background: rgb(255, 255, 255);
+    background: -webkit-radial-gradient(circle, rgba(255, 255, 255, 1) 36%, rgba(40, 40, 40, 1) 78%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 36%, rgba(40, 40, 40, 1) 78%);
+}
+
+.circuloAlternativa img {
+    width: 7vh;
+    height: 7vh;
+}
+
+.setinhaQuadradoVerde {
+    right: 8%;
+    top: 57%;
+}

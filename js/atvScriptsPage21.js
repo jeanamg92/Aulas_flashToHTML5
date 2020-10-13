@@ -8,9 +8,6 @@ const nextStepAtv1 = document.getElementById('nextStepAtv1');
 
 const enunciado = document.getElementById("enunciadoQuadradoVerde");
 
-const parabens = document.getElementById("parabens")
-const audio = document.getElementById("audioParabens");
-
 window.count = 0
 
 operadores.forEach(elem => {
@@ -49,15 +46,7 @@ function click() {
                 nextStepAtv1.classList.remove('fade-in')
                 nextStepAtv1.classList.remove('naoMostra')
             }, 500);
-            setTimeout(function() {
-                audio.play()
-                parabens.classList.remove("naoMostra")
-                parabens.classList.add("parabens")
-            }, 1000);
-
-            setTimeout(function() {
-                parabens.classList.add("naoMostra")
-            }, 4000);
+            showParabens()
             window.count = 0
         }
         // se nao bate com as respostas entra aqui, tira a classe naoMostra da imagem de erro mostrando eval, depois adiciona ela denovo

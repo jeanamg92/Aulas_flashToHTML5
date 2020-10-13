@@ -124,3 +124,23 @@ function addClasseAtv(text) {
     document.getElementById('' + text).classList.add('bottom-outscreen-translated');
 
 }
+
+
+function showParabens(onend = undefined) { //onend = função pra ser chamada depois que o parabens sumir
+    document.getElementById('parabens-wrapper').classList.remove('hidden');
+
+    const sfxParabens = document.getElementById('SFX-parabens');
+    if (sfxParabens) {
+        sfxParabens.currentTime = 0;
+        sfxParabens.muted = false;
+        sfxParabens.volume = 0.85;
+        sfxParabens.play();
+    }
+
+    setTimeout(() => {
+        document.getElementById('parabens-wrapper').classList.add('hidden');
+
+        if (onend != undefined)
+            onend();
+    }, 4250)
+}

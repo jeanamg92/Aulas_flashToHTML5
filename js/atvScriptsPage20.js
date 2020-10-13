@@ -2,8 +2,7 @@ const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".dropable");
 const acertou = document.getElementById("acertou");
 const errou = document.getElementById("errou")
-const parabens = document.getElementById("parabens")
-const audio = new Audio('../audio/parabens.mp3')
+
 
 window.acertos = 0
 draggableElements.forEach(elem => {
@@ -80,14 +79,6 @@ function drop(event) {
     }
 
     if (window.acertos == droppableElements.length) {
-        setTimeout(function() {
-            audio.play()
-            parabens.classList.remove("naoMostra")
-            parabens.classList.add("parabens")
-        }, 1000);
-
-        setTimeout(function() {
-            parabens.classList.add("naoMostra")
-        }, 4000);
+        showParabens()
     }
 }

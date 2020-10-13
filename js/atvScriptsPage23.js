@@ -28,18 +28,6 @@ droppableElements.forEach(elem => {
     elem.addEventListener("drop", drop);
 });
 
-function chamaCongrats() {
-    setTimeout(function() {
-        audio.play()
-        parabens.classList.remove("naoMostra")
-        parabens.classList.add("parabens")
-    }, 1000);
-
-    setTimeout(function() {
-        parabens.classList.add("naoMostra")
-    }, 4000);
-}
-
 function sobeDiv(divPai) {
     setTimeout(function() {
         divPai.classList.add('up-outscreen-translated')
@@ -111,7 +99,7 @@ function drop(event) {
         sobeDiv(divPai)
     } else if (window.acertos == 4 && (divPai.id == 4)) {
         sobeDiv(divPai)
-        chamaCongrats()
+        showParabens()
     }
 
 }

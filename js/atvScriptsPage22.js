@@ -1,6 +1,5 @@
 const calculos = document.querySelectorAll(".colunaCalc .calcEimagem .calc");
-const parabens = document.getElementById("parabens")
-const audio = new Audio('../audio/parabens.mp3')
+
 
 calculos.forEach(elem => {
     elem.addEventListener("click", click);
@@ -25,21 +24,10 @@ function click() {
     }
 
     if (window.count == 4) {
-        chamaCongrats()
+        showParabens()
     }
 }
 
-function chamaCongrats() {
-    setTimeout(function() {
-        audio.play()
-        parabens.classList.remove("naoMostra")
-        parabens.classList.add("parabens")
-    }, 1000);
-
-    setTimeout(function() {
-        parabens.classList.add("naoMostra")
-    }, 4000);
-}
 
 function acertou(img, elemento) {
 
