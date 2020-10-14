@@ -175,3 +175,11 @@ body {
     -webkit-transform: translateX(-600%) !important;
     transform: translateY(-600%) !important;
 }
+
+.noInteraction {
+    pointer-events: none;
+    touch-action: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}

@@ -8,6 +8,14 @@ const nextStepAtv1 = document.getElementById('nextStepAtv1');
 
 const enunciado = document.getElementById("enunciadoQuadradoVerde");
 
+var audioCorreto = new Audio('../audio/correct.mp3')
+audioCorreto.preload
+audioCorreto.volume = "0.06"
+
+var audioErrado = new Audio('../audio/erroRobo.mp3')
+audioErrado.preload
+audioErrado.volume = "0.06"
+
 window.count = 0
 
 operadores.forEach(elem => {
@@ -25,7 +33,9 @@ function click() {
         })
         // verifica se o item clicado bate com as respostas , seja ele operador ou alternativa
     if (this.id == 'correto' || this.id == 'correto') {
-        // aumenta 1 ao contador que verifica qual etapa esta
+        rowOp.style.pointerEvents = "none"
+        audioCorreto.play()
+            // aumenta 1 ao contador que verifica qual etapa esta
         window.count++
 
             // retira a classe naoMostra da imagem qeu tem o certo ou errado e retira a classe alternativas para qeu elas subam
@@ -35,13 +45,13 @@ function click() {
 
         // se estiuver no passo 1, desabilita o click na div e diminui opacidade
         if (window.count == 1) {
+
             rowOp.style.opacity = "0.3"
-            rowOp.style.pointerEvents = "none"
 
             // se estiver no passo 2, faz o mesmo de cima mas com a div das alternativas, e mostra o botao pra ir pro proximo passo
         } else if (window.count >= 2) {
-            divAlternativas.style.opacity = "0.3"
             divAlternativas.style.pointerEvents = "none"
+            divAlternativas.style.opacity = "0.3"
             setTimeout(function() {
                 nextStepAtv1.classList.remove('fade-in')
                 nextStepAtv1.classList.remove('naoMostra')
@@ -53,6 +63,7 @@ function click() {
         }
         // se nao bate com as respostas entra aqui, tira a classe naoMostra da imagem de erro mostrando eval, depois adiciona ela denovo
     } else {
+        audioErrado.play()
         img[0].classList.add('fade-in')
         img[0].classList.remove('naoMostra')
 

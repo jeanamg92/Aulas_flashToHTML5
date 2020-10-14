@@ -86,3 +86,131 @@
     right: 8%;
     top: 57%;
 }
+
+.robo {
+    position: absolute;
+    left: 80%;
+    top: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: roboY 3s ease infinite;
+}
+
+.robo img {
+    width: 17vh;
+}
+
+.fogo {
+    width: 47px;
+    height: 57px;
+    transform: scaleX(1.5);
+    background-image: url("../img/fogo.png");
+    animation: roboAnimY 0.38s steps(3) infinite, roboAnimX calc(15 * 0.38s) steps(5) infinite;
+}
+
+@keyframes roboAnimX {
+    from {
+        background-position-x: 0px;
+    }
+    to {
+        background-position-x: -235px;
+    }
+}
+
+@keyframes roboAnimY {
+    0% {
+        background-position-y: 0px;
+    }
+    100% {
+        background-position-y: -171px;
+    }
+}
+
+.cara {
+    /* display: flex; */
+    position: absolute;
+    width: 68%;
+    height: 7vh;
+    /* border: solid 1px green; */
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    /* background-image: url('../img/excla.png'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -8vh;
+    /* transition-duration: 1s; */
+}
+
+.cara img {
+    width: 80%;
+    height: -webkit-fill-available;
+    background-repeat: no-repeat;
+}
+
+.caraErro1 {
+    background-image: url('../img/excla.png');
+    background-position-y: 0vh;
+    background-position: center;
+    transition-duration: 0.15s;
+    background-size: contain;
+}
+
+.caraErro2 {
+    background-image: url('../img/cara1.png');
+    background-position-y: 0vh;
+    background-position: center;
+    background-size: contain;
+    transition-duration: 0.15s;
+}
+
+.caraErro3 {
+    background-image: url('../img/atencao.png');
+    background-position-y: 0vh;
+    background-position: center;
+    transition-duration: 0.15s;
+    background-size: contain;
+}
+
+.caraErro4 {
+    background-image: url('../img/pense.png');
+    background-position-y: 0vh;
+    background-position: center;
+    transition-duration: 0.15s;
+    background-size: contain;
+}
+
+.caraAcerto1 {
+    background-image: url('../img/acertouRobo.png');
+    background-position-y: 0vh;
+    background-position: center;
+    transition-duration: 0.15s;
+    background-size: contain;
+}
+
+.caraAcerto2 {
+    background-image: url('../img/mosca.png');
+    background-position: center;
+    background-position-y: 0vh;
+    transition-duration: 0.15s;
+    background-size: contain;
+}
+
+.desceCara {
+    background-position-y: 8vh;
+    transition-duration: 0.15s;
+}
+
+@keyframes roboY {
+    0% {
+        transform: translateY(54px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(54px);
+    }
+}

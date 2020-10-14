@@ -1,5 +1,12 @@
 const calculos = document.querySelectorAll(".colunaCalc .calcEimagem .calc");
 
+var audioCorreto = new Audio('../audio/correct.mp3')
+audioCorreto.preload
+audioCorreto.volume = "0.06"
+
+var audioErrado = new Audio('../audio/erroRobo.mp3')
+audioErrado.preload
+audioErrado.volume = "0.06"
 
 calculos.forEach(elem => {
     elem.addEventListener("click", click);
@@ -16,10 +23,12 @@ function click() {
     var elemento = this.parentElement.parentElement
 
     if (this.id == 'correto') {
+        audioCorreto.play()
         window.count++
             acertou(img, elemento)
 
     } else {
+        audioErrado.play()
         errou(img, elemento)
     }
 

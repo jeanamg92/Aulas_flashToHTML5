@@ -15,8 +15,16 @@ const nuvens = getElement("selectAll", "#nuvem")
 const carros = document.querySelectorAll(".carro");
 const calculo = getElement("id", "calculo")
 const audioKart = new Audio('../audio/raceCar2.mp3')
+audioKart.volume = "0.08"
 audioKart.preload
 
+var audioErrado = new Audio('../audio/erroRobo.mp3')
+audioErrado.preload
+audioErrado.volume = "0.06"
+
+var audioCorreto = new Audio('../audio/correct.mp3')
+audioCorreto.preload
+audioCorreto.volume = "0.06"
 
 window.count = 0
 
@@ -25,6 +33,10 @@ carros.forEach(elem => {
 });
 
 function acertou(acertouImg) {
+    carros.forEach(elem => {
+        elem.style.pointerEvents = "none"
+    });
+    audioCorreto.play()
     acertouImg[0].classList.add('fade-in')
     acertouImg[0].classList.remove('naoMostra')
 
@@ -35,6 +47,7 @@ function acertou(acertouImg) {
 }
 
 function errou(errouImg) {
+    audioErrado.play()
     errouImg[0].classList.add('fade-in')
     errouImg[0].classList.remove('naoMostra')
 
@@ -47,6 +60,8 @@ function nextCorrida() {
     carros.forEach(elem => {
         elem.style.transitionDuration = "0s"
         elem.style.transform = "translate(" + 0 + "%)"
+        elem.style.pointerEvents = "auto"
+
     });
     if (window.count == 1) {
 
@@ -104,9 +119,9 @@ function nextCorrida() {
 
 function andaCarro(kart) {
     setTimeout(function() {
-        getElement("id", kart).style.transform = "translate(" + 700 + "%)"
+        getElement("id", kart).style.transform = "translate(" + 400 + "%)"
         getElement("id", kart).style.transitionDuration = "4s"
-        audioKart.play
+        audioKart.play()
 
         setTimeout(function() {
             if (window.count > 4) {
@@ -121,9 +136,9 @@ function andaCarro(kart) {
 
 function click() {
     if (this.getAttribute('correto') == 'sim') {
+        acertou(acertouImg)
         window.count++
-            acertou(acertouImg)
-        andaCarro(this.id)
+            andaCarro(this.id)
 
     } else {
         errou(errouImg)

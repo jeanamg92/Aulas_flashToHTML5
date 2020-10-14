@@ -15,7 +15,13 @@ const acertouImg = getElement("selectAll", "#acertou");
 const errouImg = getElement("selectAll", "#errou")
 
 const parabens = getElement("id", "parabens")
-const audio = new Audio('../audio/parabens.mp3')
+var audioCorreto = new Audio('../audio/correct.mp3')
+audioCorreto.preload
+audioCorreto.volume = "0.06"
+
+var audioErrado = new Audio('../audio/erroRobo.mp3')
+audioErrado.preload
+audioErrado.volume = "0.06"
 
 window.acertos = 0
 
@@ -37,6 +43,7 @@ function sobeDiv(divPai) {
 }
 
 function acertou(img, elemento, itemDraggable) {
+    audioCorreto.play()
 
     itemDraggable.classList.add('transparent')
     itemDraggable.style.pointerEvents = "none"
@@ -55,6 +62,7 @@ function acertou(img, elemento, itemDraggable) {
 }
 
 function errou(img) {
+    audioErrado.play()
     img[0].classList.add('fade-in')
     img[0].classList.remove('naoMostra')
 

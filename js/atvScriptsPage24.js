@@ -17,6 +17,14 @@ const errouImg = getElement("selectAll", "#errou")
 const audioTrem = new Audio('../audio/trenzinho.mp3')
 audioTrem.preload
 
+var audioCorreto = new Audio('../audio/correct.mp3')
+audioCorreto.preload
+audioCorreto.volume = "0.06"
+
+var audioErrado = new Audio('../audio/erroRobo.mp3')
+audioErrado.preload
+audioErrado.volume = "0.06"
+
 window.acertos = 0
 
 draggableElements.forEach(elem => {
@@ -48,6 +56,9 @@ function andaTrem(divPai, translate, duration) {
 
 function acertou(acertouImg, targetElem, itemDraggable) {
 
+    audioCorreto.play()
+
+
     itemDraggable.classList.add('transparent')
     itemDraggable.style.pointerEvents = "none"
     itemDraggable.removeAttribute('draggable')
@@ -64,6 +75,7 @@ function acertou(acertouImg, targetElem, itemDraggable) {
 }
 
 function errou(errouImg) {
+    audioErrado.play()
     errouImg[0].classList.add('fade-in')
     errouImg[0].classList.remove('naoMostra')
 

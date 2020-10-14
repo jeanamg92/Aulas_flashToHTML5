@@ -2,54 +2,31 @@ const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".dropable");
 const acertou = document.getElementById("acertou");
 const errou = document.getElementById("errou")
+var audioCorreto = new Audio('../audio/correct.mp3')
+audioCorreto.preload
+audioCorreto.volume = "0.06"
 
+var audioErrado = new Audio('../audio/erroRobo.mp3')
+audioErrado.preload
+audioErrado.volume = "0.06"
 
 window.acertos = 0
 draggableElements.forEach(elem => {
     elem.addEventListener("dragstart", dragStart);
-    elem.addEventListener("drag", drag);
-    elem.addEventListener("dragend", dragEnd);
 });
 
 droppableElements.forEach(elem => {
-    elem.addEventListener("dragenter", dragEnter);
     elem.addEventListener("dragover", dragOver);
-    elem.addEventListener("dragleave", dragLeave);
     elem.addEventListener("drop", drop);
 });
-
-function sleep(milliseconds) {
-    var start = new Date().getTime();
-    for (var i = 0; i < 1e7; i++) {
-        if ((new Date().getTime() - start) > milliseconds) {
-            break;
-        }
-    }
-}
 
 // funcoes drag and drop
 function dragStart(event) {
     event.dataTransfer.setData("text", event.target.id);
 }
 
-function drag(event) {
-
-}
-
-function dragEnd(event) {
-
-}
-
-function dragEnter(event) {
-
-}
-
 function dragOver(event) {
     event.preventDefault();
-}
-
-function dragLeave(event) {
-
 }
 
 function drop(event) {
@@ -64,12 +41,13 @@ function drop(event) {
         event.target.style.opacity = "0.7"
 
         acertou.classList.remove("naoMostra")
+        audioCorreto.play()
         setTimeout(function() {
             acertou.classList.add("naoMostra")
         }, 1000);
         window.acertos++
-            console.log(window.acertos)
     } else if (!(draggableElementData == droppableElementData) && event.target.innerHTML == "") {
+        audioErrado.play()
         errou.classList.remove("naoMostra")
         setTimeout(function() {
             errou.classList.add("naoMostra")
