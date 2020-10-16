@@ -127,3 +127,19 @@ function showParabens(onend = undefined) { //onend = função pra ser chamada de
             onend();
     }, 4250)
 }
+
+function pixelToVH(value) {
+    return (100 * value) / window.innerHeight
+}
+
+function pixelToVW(value) {
+    return (100 * value) / window.innerWidth
+}
+
+function vhToPixel(value) {
+    (window.innerHeight * value) / 100
+}
+
+function vwToPixel(value) {
+    ((window.innerWidth * value) / 100)
+}

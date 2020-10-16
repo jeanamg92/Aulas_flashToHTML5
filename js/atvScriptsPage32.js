@@ -19,6 +19,12 @@ var bola11 = document.getElementById('bola11')
 var bola12 = document.getElementById('bola12')
 var bola13 = document.getElementById('bola13')
 
+function getPos(el) {
+    // yay readability
+    for (var lx = 0, ly = 0; el != null; lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
+    return { x: lx, y: ly };
+}
+
 var audioErrado = new Audio('../audio/erroRobo.mp3')
 audioErrado.preload
 audioErrado.volume = "0.06"
@@ -83,6 +89,7 @@ function noInteraction(bolas, interaction) {
 function reset() {
     bolas.forEach(elem => {
         elem.style.pointerEvents = "none"
+        elem.style.opacity = "1"
     });
 
     bola1.style.pointerEvents = "auto"
@@ -91,9 +98,22 @@ function reset() {
 
     bolaResult.setAttribute('valor', 10)
     bolaResult.innerHTML = 10
+    calculo.classList.remove('botaoPisca')
 }
 
 function bolaAnda(elem) {
+    // var position = getPos(elem)
+
+    // var x = (position.x - 43) / 2
+    // var y = 0
+    // var xvw = pixelToVW(x)
+    // var yvh = pixelToVH(y)
+
+    // console.log(x, y)
+
+    // bolaResult.style.transform = "translate(" + xvw + "vw, -" + yvh + "vh)"
+    // bolaResult.style.transitionDuration = "1s"
+
     elem.appendChild(bolaResult)
 }
 
