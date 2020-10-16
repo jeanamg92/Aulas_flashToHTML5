@@ -18,6 +18,7 @@ audioErrado.volume = "0.06"
 
 window.count = 0
 window.step = document.getElementById('pageCount4')
+console.log(window.step)
 
 operadores.forEach(elem => {
     elem.addEventListener("click", click);
