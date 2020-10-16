@@ -79,7 +79,7 @@
         width: 5vh;
         height: 5.5vh;
         background-color: transparent;
-        border: 4px solid rgb(164, 214, 133);
+        border: 0.6vh solid rgb(164, 214, 133);
         border-radius: 10px;
         margin: 10px;
     }

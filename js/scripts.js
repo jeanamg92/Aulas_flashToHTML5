@@ -1,5 +1,7 @@
 const totalPaginas = 28;
-//IMPORTANTE! - a composiçao do link tem que ser /Pages/paginax.html sempre
+document.getElementById('nextPageBtn').style.opacity = "1"
+document.getElementById('nextPageBtn').style.pointerEvents = "auto"
+    //IMPORTANTE! - a composiçao do link tem que ser /Pages/paginax.html sempre
 
 function nextPage() {
     const arrayOfStrings = document.getElementById("iframe").src.split("/");
@@ -15,15 +17,23 @@ function nextPage() {
     }
 
     if (nextPage <= totalPaginas) {
+
         arrayOfStrings[idx] = "page" + nextPage + ".html";
         // console.log(arrayOfStrings[idx])
         const srcString = arrayOfStrings.join("/");
         document.getElementById("iframe").src = srcString;
         document.getElementById("paginaAtual").innerHTML = ("00" + nextPage).slice(-2);
+
+        if (nextPage == totalPaginas) {
+            document.getElementById('nextPageBtn').style.opacity = "0"
+            document.getElementById('nextPageBtn').style.pointerEvents = "none"
+        }
     }
 }
 
 function previousPage() {
+    document.getElementById('nextPageBtn').style.opacity = "1"
+    document.getElementById('nextPageBtn').style.pointerEvents = "auto"
     const arrayOfStrings = document.getElementById("iframe").src.split("/");
     const idx = arrayOfStrings.indexOf("Pages") + 1;
 
@@ -45,6 +55,8 @@ function previousPage() {
 }
 
 function gotoPage(page) {
+    document.getElementById('nextPageBtn').style.opacity = "1"
+    document.getElementById('nextPageBtn').style.pointerEvents = "auto"
     const arrayOfStrings = document.getElementById("iframe").src.split("/");
     const idx = arrayOfStrings.indexOf("Pages") + 1;
     const previousPage = page;
