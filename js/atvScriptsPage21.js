@@ -91,7 +91,6 @@ function nextStepAtv(step) {
             // previouStepAtv1.classList.remove("naoMostra");
 
     } else if (step == 4) {
-        window.step = 4
         parent.document.getElementById('iframe').src = "../Pages/part4page21.html"
             // previouStepAtv1.classList.remove("naoMostra");
     } else if (step == 1) {
