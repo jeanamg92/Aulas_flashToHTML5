@@ -17,6 +17,7 @@ audioErrado.preload
 audioErrado.volume = "0.06"
 
 window.count = 0
+window.step = document.getElementById('pageCount4')
 
 operadores.forEach(elem => {
     elem.addEventListener("click", click);
@@ -27,6 +28,7 @@ alternativas.forEach(elem => {
 });
 
 function click() {
+
     // percorre o array de filhos da div procurando a imagem com o id acertoOuErro
     this.childNodes.forEach(elem => {
             img = this.querySelectorAll("#acertoOuErro")
@@ -56,9 +58,12 @@ function click() {
                 nextStepAtv1.classList.remove('fade-in')
                 nextStepAtv1.classList.remove('naoMostra')
             }, 500);
-            setTimeout(function() {
-                showParabens();
-            }, 1000);
+
+            if (!(window.step = null)) {
+                setTimeout(function() {
+                    showParabens();
+                }, 1000);
+            }
             window.count = 0
         }
         // se nao bate com as respostas entra aqui, tira a classe naoMostra da imagem de erro mostrando eval, depois adiciona ela denovo
@@ -86,6 +91,7 @@ function nextStepAtv(step) {
             // previouStepAtv1.classList.remove("naoMostra");
 
     } else if (step == 4) {
+        window.step = 4
         parent.document.getElementById('iframe').src = "../Pages/part4page21.html"
             // previouStepAtv1.classList.remove("naoMostra");
     } else if (step == 1) {

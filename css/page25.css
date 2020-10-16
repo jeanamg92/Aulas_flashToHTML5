@@ -112,6 +112,7 @@ body {
     width: 5076px;
     background-size: 1270px;
     animation: slide 2s linear infinite;
+    background-color: rgb(59, 58, 60);
 }
 
 @keyframes slide {
