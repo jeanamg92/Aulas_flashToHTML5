@@ -1,34 +1,27 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
-
-/* .fullScreen {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vh;
-    height: 100vh;
-    background-color: violet;
-    z-index: 999;
-} */
-
 .displayNone {
     display: none !important;
 }
 
-#overlay {
-    /* position: absolute; */
+.displayFlex {
+    display: flex !important;
+}
+
+body {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    font-family: sans-serif;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.fundo {
+    position: absolute;
     width: 100vw;
     height: 100vh;
     left: 0;
     top: 0;
-    background-color: rgba(153, 4, 4, 0.76);
-    display: none;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -44,24 +37,21 @@
     -ms-flex-direction: column;
     flex-direction: column;
     z-index: 999;
-}
-
-body {
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
-    font-family: sans-serif;
-    color: white;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-.fundo {
     background-image: url("../img/fundo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     background-size: cover;
+}
+
+.fundo div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    /* left: 50%; */
 }
 
 #iframe {

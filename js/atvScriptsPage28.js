@@ -46,7 +46,7 @@ function errou(img) {
 
     bolas.forEach(elem => {
         elem.style.pointerEvents = "none"
-        elem.style.opacity = "0.7"
+        elem.style.opacity = "0.95"
         elem.style.transitionDuration = "1s"
     });
 
@@ -115,7 +115,7 @@ function bolaAnda(elem) {
     bolaResult.style.left = window.getComputedStyle(elem, null).getPropertyValue('left')
     setTimeout(() => {
         podeClick = true
-    }, 3000);
+    }, 1000);
 }
 
 function click() {
@@ -153,7 +153,7 @@ function click() {
         } else if (this.id == "bola6") {
             calcula(this)
             noInteraction([bola5, bola6, bola7], 1)
-            noInteraction([bola8, bola9], 0)
+            noInteraction([bola8, bola9, bola10], 0)
 
             bolaAnda(this)
         } else if (this.id == "bola7") {

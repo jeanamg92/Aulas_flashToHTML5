@@ -33,11 +33,8 @@
     <link rel="preload" href="../Pages/page26.html" as="document">
     <link rel="preload" href="../Pages/page27.html" as="document">
     <link rel="preload" href="../Pages/page28.html" as="document">
-    <link rel="preload" href="../Pages/page29html" as="document">
-    <link rel="preload" href="../Pages/page26.html" as="document">
     <link rel="preload" href="../css/canvasDefault.css" as="style">
     <link rel="preload" href="../css/principal.css" as="style">
-
 
     <link rel="preload" href="../img/fundo.jpg" as="image">
     <link rel="preload" href="../img/bgatv.jpg" as="image">
@@ -75,21 +72,21 @@
 </head>
 
 <body id="myvideo">
-    <div id="overlay" class="fundo fullScreen" style="display: flex;" onclick="removeClasseFS()">
+    <div id="overlay" class="fundo" onclick="removeClasseFS()">
         <div>Clique aqui para tela cheia</div>
     </div>
 
-    <div id="tudo" class="tudo displayNone">
+    <div id="tudo" class="tudo ">
         <div class="cabecalho">
             <div class="titulo">MATEMÁTICA • As quatro Operações</div>
 
             <div class="ano">4º ANO</div>
         </div>
 
-        <iframe id="iframe" class="presentation-area-iframe" src="page1.html" frameborder="0"></iframe>
+        <iframe id="iframe" class="presentation-area-iframe" src="page28.html" frameborder="0"></iframe>
 
         <div class="rodape">
-            <div class="logo" onclick="openFullscreen();">
+            <div class="logo" onclick="openFullscreen(document.getElementById('myvideo'));">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 4000 2870" preserveAspectRatio="xMidYMid meet">
             <g id="layer101" fill="white" stroke="none">
               <path
@@ -296,7 +293,8 @@
             </div>
         </div>
     </div>
-    <div id="menu" class=" displayNone menu contentMenu right-outscreen-translated">
+
+    <div id="menu" class="  menu contentMenu right-outscreen-translated">
         <div class="cabecalhoIndice">
             ÍNDICE
             <button class="closeMenu" onclick="document.getElementById('menu').classList.add('right-outscreen-translated');">X</button>
@@ -372,31 +370,14 @@
 </body>
 
 <script>
-    var elemento = document.getElementById('myvideo')
-
     window.addEventListener("fullscreenchange", function(event) {
-        checkFullScreenRoutine(false);
+        document.getElementById('overlay').classList.remove('displayNone')
+        document.getElementById('overlay').classList.add('displayFlex')
+        openFullscreen();
     });
 
-    document.querySelector("#myvideo").addEventListener(
-        "click",
-        function() {
-            checkFullScreenRoutine();
-            // checkCorrectRotation();
-        },
-        false
-    );
-
-    document.querySelector("iframe").addEventListener(
-        "click",
-        function() {
-            checkFullScreenRoutine();
-            // checkCorrectRotation();
-        },
-        false
-    );
-
-    function openFullscreen(elemento) {
+    function openFullscreen() {
+        console.log('openfull')
         var elem = document.getElementById("myvideo");
         if (elem.requestFullscreen) {
             elem.requestFullscreen();
@@ -414,35 +395,11 @@
         screen.orientation.lock("landscape");
     }
 
-    function checkFullScreenRoutine() {
-        var clicked = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-        var overlay = document.getElementById("overlay");
-
-        if (clicked) {
-            overlay.style.display = "none";
-
-            if (!document.fullscreenElement) {
-                openFullscreen(elemento);
-            }
-        } else {
-            if (!document.fullscreenElement) {
-                overlay.style.display = "flex";
-            }
-        }
-
-        // prepareMovie();
-    }
-
-    checkFullScreenRoutine(false);
-
-
     function removeClasseFS() {
-        // var elemento = document.getElementById('myvideo')
-        // console.log(elemento)
-        openFullscreen();
-        document.getElementById('tudo').classList.remove('displayNone')
-        document.getElementById('menu').classList.remove('displayNone')
+        document.getElementById('overlay').classList.remove('displayFlex')
         document.getElementById('overlay').classList.add('displayNone')
+        openFullscreen();
+
     }
 </script>
 <script>

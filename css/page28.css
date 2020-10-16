@@ -172,7 +172,8 @@
     border: 0.6vh solid rgb(164, 214, 133);
     background-color: rgb(117, 191, 66);
     border-radius: 90px;
-    transition: ease 3s all;
+    transform-origin: center center;
+    transition: ease 1s all;
     z-index: 999;
 }
 
@@ -194,11 +195,11 @@
 .calculo {
     display: flex;
     position: absolute;
-    left: 15%;
-    bottom: 9%;
+    left: 3%;
+    bottom: 5%;
     font-size: 4vh;
     width: 16%;
-    height: 7%;
+    height: 13%;
     border: 0.6vh solid rgb(164, 214, 133);
     border-radius: 16px;
     background-color: rgba(0, 121, 10, 0.9);

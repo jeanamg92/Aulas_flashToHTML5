@@ -1,7 +1,11 @@
 const totalPaginas = 28;
-document.getElementById('nextPageBtn').style.opacity = "1"
-document.getElementById('nextPageBtn').style.pointerEvents = "auto"
-    //IMPORTANTE! - a composiçao do link tem que ser /Pages/paginax.html sempre
+
+if (document.getElementById('nextPageBtn')) {
+    document.getElementById('nextPageBtn').style.opacity = "1"
+    document.getElementById('nextPageBtn').style.pointerEvents = "auto"
+}
+
+//IMPORTANTE! - a composiçao do link tem que ser /Pages/paginax.html sempre
 
 function nextPage() {
     const arrayOfStrings = document.getElementById("iframe").src.split("/");
@@ -119,8 +123,10 @@ function addClasseAtv(text) {
 
 }
 
-const sfxParabens = document.getElementById('SFX-parabens');
-sfxParabens.preload
+
+if (document.getElementById('SFX-parabens')) {
+    var sfxParabens = document.getElementById('SFX-parabens');
+}
 
 function showParabens(onend = undefined) { //onend = função pra ser chamada depois que o parabens sumir
     document.getElementById('parabens-wrapper').classList.remove('hidden');
