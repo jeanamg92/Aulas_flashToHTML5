@@ -1,4 +1,4 @@
-const totalPaginas = 32;
+const totalPaginas = 28;
 //IMPORTANTE! - a composiçao do link tem que ser /Pages/paginax.html sempre
 
 function nextPage() {
