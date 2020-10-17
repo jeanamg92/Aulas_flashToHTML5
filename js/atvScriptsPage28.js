@@ -90,6 +90,7 @@ function noInteraction(bolas, interaction) {
         });
     }
 }
+console.log('teste')
 
 function reset() {
     bolas.forEach(elem => {
