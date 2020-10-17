@@ -38,7 +38,7 @@ body {
 .setinhaQuadradoVerde:hover {
     width: 7vh;
     height: 7vh;
-    cursor: pointer;
+    cursor: hand;
 }
 
 .setinhaQuadradoVerdeEsquerda {
@@ -52,7 +52,7 @@ body {
 .setinhaQuadradoVerdeEsquerda:hover {
     width: 7vh;
     height: 7vh;
-    cursor: pointer;
+    cursor: hand;
 }
 
 .camadaBranca {

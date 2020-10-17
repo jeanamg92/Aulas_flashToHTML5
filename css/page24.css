@@ -58,7 +58,7 @@
     -ms-flex-align: center;
     align-items: center;
     font-size: 3.5vh;
-    cursor: pointer;
+    cursor: hand;
     margin: auto;
     text-align: center;
 }

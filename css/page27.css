@@ -44,7 +44,7 @@
     
     .fonteOp {
         font-size: 15vh;
-        cursor: pointer;
+        cursor: hand;
         height: -webkit-fit-content;
         height: -moz-fit-content;
         height: fit-content;
@@ -55,7 +55,7 @@
     height: 100%; */
         /* align-items: center;
     justify-content: center; */
-        cursor: pointer;
+        cursor: hand;
     }
     
     .calculoAtv {
