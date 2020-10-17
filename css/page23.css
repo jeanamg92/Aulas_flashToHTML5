@@ -30,7 +30,7 @@
     -ms-flex-align: center;
     align-items: center;
     font-size: 4vh;
-    cursor: hand;
+    cursor: pointer;
     margin: 0.5vh;
 }
 
@@ -99,7 +99,7 @@
     width: 16vw;
     height: 8vh;
     font-size: 4vh;
-    cursor: hand;
+    cursor: pointer;
     margin-left: 0.5vw;
 }
 
