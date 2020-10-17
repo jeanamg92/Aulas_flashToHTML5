@@ -79,6 +79,7 @@ droppableElements.forEach(elem => {
     });
 });
 
+
 function showParabens(onend = undefined) { //onend = função pra ser chamada depois que o parabens sumir
     document.getElementById('parabens-wrapper').classList.remove('hidden');
 
