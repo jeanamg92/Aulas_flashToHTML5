@@ -89,7 +89,6 @@ function noInteraction(bolas, interaction) {
             elem.style.pointerEvents = "auto"
         });
     }
-
 }
 
 function reset() {
