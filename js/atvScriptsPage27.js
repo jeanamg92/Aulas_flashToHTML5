@@ -15,11 +15,11 @@ const errouImg = getElement("selectAll", "#errou")
 
 var audioCorreto = new Audio('../audio/correct.mp3')
 audioCorreto.preload
-audioCorreto.volume = "0.06"
+audioCorreto.volume = "0.7"
 
 var audioErrado = new Audio('../audio/erroRobo.mp3')
 audioErrado.preload
-audioErrado.volume = "0.06"
+audioErrado.volume = "1"
 
 window.acertos = 0
 

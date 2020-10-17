@@ -10,11 +10,11 @@ const enunciado = document.getElementById("enunciadoQuadradoVerde");
 
 var audioCorreto = new Audio('../audio/correct.mp3')
 audioCorreto.preload
-audioCorreto.volume = "0.06"
+audioCorreto.volume = "0.7"
 
 var audioErrado = new Audio('../audio/erroRobo.mp3')
 audioErrado.preload
-audioErrado.volume = "0.06"
+audioErrado.volume = "1"
 
 window.count = 0
 window.step = document.getElementById('pageCount4')

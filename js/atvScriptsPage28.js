@@ -33,7 +33,7 @@ function getPos(el) {
 
 var audioErrado = new Audio('../audio/erroRobo.mp3')
 audioErrado.preload
-audioErrado.volume = "0.06"
+audioErrado.volume = "1"
 
 bolas.forEach(elem => {
     elem.addEventListener("click", click);

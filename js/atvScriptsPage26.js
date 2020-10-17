@@ -15,7 +15,7 @@ audioRoboErro.volume = "0.5"
 
 var audioCorreto = new Audio('../audio/correct.mp3')
 audioCorreto.preload
-audioCorreto.volume = "0.06"
+audioCorreto.volume = "0.7"
 
 var audioFogo = new Audio('../audio/fogo.mp3')
 audioFogo.preload
