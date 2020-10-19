@@ -51,7 +51,20 @@ body {
     width: 100%;
     position: absolute;
     top: 50%;
+    animation: label 1.5s ease infinite;
     /* left: 50%; */
+}
+
+@keyframes label {
+    0% {
+        color: rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        color: rgba(255, 255, 255, 1);
+    }
+    100% {
+        color: rgba(255, 255, 255, 0.3);
+    }
 }
 
 #iframe {

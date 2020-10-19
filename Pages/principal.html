@@ -72,7 +72,7 @@
 </head>
 
 <body id="myvideo">
-    <div id="overlay" class="fundo" onclick="removeClasseFS()">
+    <div id="overlay" class="fundo" onclick="">
         <div>Clique aqui para tela cheia</div>
     </div>
 
@@ -371,36 +371,54 @@
 
 <script>
     window.addEventListener("fullscreenchange", function(event) {
-        document.getElementById('overlay').classList.remove('displayNone')
-        document.getElementById('overlay').classList.add('displayFlex')
-        openFullscreen();
+        // console.log(event);
+        checkFullScreenRoutine(false);
     });
 
-    function openFullscreen() {
-        console.log('openfull')
-        var elem = document.getElementById("myvideo");
+    document.querySelector("body").addEventListener(
+        "click",
+        function() {
+            checkFullScreenRoutine();
+            // checkCorrectRotation();
+        },
+        false
+    );
+
+    function openFullscreen(elem) {
         if (elem.requestFullscreen) {
             elem.requestFullscreen();
         } else if (elem.mozRequestFullScreen) {
             /* Firefox */
             elem.mozRequestFullScreen();
         } else if (elem.webkitRequestFullscreen) {
-            /* Chrome, Safari e Opera */
+            /* Chrome, Safari and Opera */
             elem.webkitRequestFullscreen();
         } else if (elem.msRequestFullscreen) {
             /* IE/Edge */
             elem.msRequestFullscreen();
         }
-
-        screen.orientation.lock("landscape");
     }
 
-    function removeClasseFS() {
-        document.getElementById('overlay').classList.remove('displayFlex')
-        document.getElementById('overlay').classList.add('displayNone')
-        openFullscreen();
+    function checkFullScreenRoutine() {
+        var clicked = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+        var overlay = document.getElementById("overlay");
 
+        if (clicked) {
+            overlay.style.display = "none";
+
+            if (!document.fullscreenElement) {
+                openFullscreen(document.querySelector("body"));
+            }
+        } else {
+            if (!document.fullscreenElement) {
+                overlay.style.display = "flex";
+            }
+        }
+
+        // prepareMovie();
     }
+
+    checkFullScreenRoutine(false);
 </script>
 <script>
 </script>
