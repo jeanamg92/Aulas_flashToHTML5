@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loader</title>
   <style>
@@ -11,7 +12,7 @@
     }
     
     .overlay {
-      /* background-color: black; */
+      background-color: black;
       position: fixed;
       width: 100vw;
       height: 100vh;
@@ -19,6 +20,15 @@
       left: 0;
       transform: scale(1);
       z-index: 8000;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      color: white;
+    }
+    
+    .progress {
+      top: 50%;
     }
   </style>
 </head>
@@ -52,8 +62,8 @@
 
       var porcentagem = Math.ceil((carregados / total) * 100);
       document.getElementById('files').setAttribute('value', porcentagem);
-      document.getElementById('files').innerHTML = porcentagem
-        // console.log(porcentagem)
+      // document.getElementById('files').innerHTML = porcentagem
+      // console.log(porcentagem)
     }
 
     const limite = 5;
